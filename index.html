@@ -520,7 +520,7 @@ footer a{color:var(--ink-2)}
           <h2>Book a trial lesson</h2>
           <p class="lede">Tell us the exam and when you are free. We will reply with two or three slots in your time zone within one working day.</p>
         </div>
-        <form id="trial-form" novalidate data-endpoint="">
+        <form id="trial-form" novalidate data-endpoint="https://formsubmit.co/ajax/rishiranjan3799@gmail.com">
           <div class="field"><label for="f-student">Student's first name</label><input id="f-student" name="student" autocomplete="off" required placeholder="Maya"></div>
           <div class="field"><label for="f-email">Parent's email</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="parent@example.com"></div>
           <div class="field"><label for="f-country">Country</label>
@@ -624,7 +624,7 @@ footer a{color:var(--ink-2)}
     }
     err.hidden=true;
     var times=d.getAll("times").join(", ")||"any time";
-    var payload={student:name,email:email,country:d.get("country"),grade:d.get("grade"),exam:d.get("exam"),tz:d.get("tz"),times:times,notes:d.get("notes")};
+    var payload={_subject:"New Medalwise trial request",_template:"table",_captcha:"false",student:name,email:email,country:d.get("country"),grade:d.get("grade"),exam:d.get("exam"),tz:d.get("tz"),times:times,notes:d.get("notes")};
     function showDone(sent){
       form.innerHTML="";
       var box=document.createElement("div"); box.className="done";
