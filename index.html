@@ -306,15 +306,20 @@ footer a{color:var(--ink-2)}
 .avatar{background:linear-gradient(135deg,#5b7cff,#2f4fb0);color:#fff}
 
 /* pricing */
-.plan{border-radius:18px;transition:transform .2s ease, box-shadow .2s ease}
-.plan:hover{transform:translateY(-4px);box-shadow:0 22px 44px -24px rgba(20,28,51,.45)}
-.plan.featured{border:2px solid transparent;background:linear-gradient(var(--sheet),var(--sheet)) padding-box,linear-gradient(135deg,#5b7cff,#f0a92e) border-box;box-shadow:0 26px 60px -28px rgba(47,79,176,.6);transform:translateY(-8px)}
-.plan.featured:hover{transform:translateY(-12px)}
+.plan{border-radius:18px;border:2px solid var(--line);cursor:pointer;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, opacity .25s ease}
+.plan-hi,.plan.featured{border-color:transparent;background:linear-gradient(var(--sheet),var(--sheet)) padding-box,linear-gradient(135deg,#5b7cff,#f0a92e) border-box;box-shadow:0 26px 60px -28px rgba(47,79,176,.6);transform:translateY(-8px)}
+/* whichever card the pointer or keyboard is on takes the highlight; the others step back */
+.plans:hover .plan,.plans:focus-within .plan{border-color:var(--line);background:var(--sheet);box-shadow:none;transform:none;opacity:.8}
+.plans .plan:hover,.plans .plan:focus-within,.plans .plan.picked{opacity:1;border-color:transparent;background:linear-gradient(var(--sheet),var(--sheet)) padding-box,linear-gradient(135deg,#5b7cff,#f0a92e) border-box;box-shadow:0 30px 60px -26px rgba(47,79,176,.65);transform:translateY(-10px) scale(1.02)}
+.plan .amount .p{transition:color .25s ease}
+.plans .plan:hover .amount .p,.plans .plan:focus-within .amount .p{color:var(--blue)}
+.plan-btn{margin-top:6px;width:100%;border-color:var(--ink);background:transparent;color:var(--ink)}
+.plan:hover .plan-btn,.plan:focus-within .plan-btn,.plan.picked .plan-btn{background:linear-gradient(135deg,#ffd36b,#f0a92e);border-color:transparent;color:#141c33}
 .badge{background:linear-gradient(135deg,#ffd36b,#f0a92e);color:#141c33}
 .plan ul{list-style:none;padding:0}
 .plan ul li{padding-left:26px;position:relative}
 .plan ul li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
-@media (max-width:900px){.plan.featured{transform:none}}
+@media (max-width:900px){.plan.featured,.plans .plan:hover,.plans .plan:focus-within{transform:none}}
 
 /* faq + booking */
 .faq details{border-radius:14px;transition:border-color .2s ease, box-shadow .2s ease}
@@ -327,8 +332,8 @@ footer a{color:var(--ink-2)}
 .book .btn{background:linear-gradient(135deg,#ffd36b,#f0a92e);border-color:transparent;box-shadow:0 10px 30px -8px rgba(240,169,46,.6)}
 
 /* scroll reveal (only when JS runs) */
-.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
-.js .reveal.in{opacity:1;transform:none}
+.js .reveal{opacity:0;translate:0 22px;transition:opacity .7s ease, translate .7s ease, transform .25s ease, box-shadow .25s ease}
+.js .reveal.in{opacity:1;translate:none}
 
 /* mobile sticky CTA */
 .mobile-cta{display:none}
@@ -648,6 +653,7 @@ footer a{color:var(--ink-2)}
           <p class="amount"><span class="p">$39</span> <small>per lesson</small></p>
           <p class="pack">Pack of 8: <span class="pk"></span> <b>save 10%</b></p>
           <ul><li>Contest-trained coach</li><li>Season plan and homework</li><li>Lesson recordings</li><li>Monthly parent report</li></ul>
+          <a class="btn plan-btn" href="#book" data-plan="Foundation">Start with Foundation</a>
         </article>
         <article class="plan featured reveal" data-usd="59" data-cad="82">
           <span class="badge">Most chosen</span>
@@ -656,6 +662,7 @@ footer a{color:var(--ink-2)}
           <p class="amount"><span class="p">$59</span> <small>per lesson</small></p>
           <p class="pack">Pack of 8: <span class="pk"></span> <b>save 10%</b></p>
           <ul><li>National Olympiad qualifier coach</li><li>Everything in Foundation</li><li>Monthly timed mock with review</li><li>Priority scheduling</li></ul>
+          <a class="btn plan-btn" href="#book" data-plan="Contender">Start with Contender</a>
         </article>
         <article class="plan reveal" data-usd="99" data-cad="137">
           <h3>Elite</h3>
@@ -663,6 +670,7 @@ footer a{color:var(--ink-2)}
           <p class="amount"><span class="p">$99</span> <small>per lesson</small></p>
           <p class="pack">Pack of 8: <span class="pk"></span> <b>save 10%</b></p>
           <ul><li>Medalist or national-camp coach</li><li>Everything in Contender</li><li>Proof writing feedback</li><li>Messaging support between lessons</li></ul>
+          <a class="btn plan-btn" href="#book" data-plan="Elite">Start with Elite</a>
         </article>
       </div>
       <div class="policy">
@@ -718,6 +726,8 @@ footer a{color:var(--ink-2)}
               <label class="chip"><input type="checkbox" name="times" value="Weekend mornings"><span>Weekend mornings</span></label>
               <label class="chip"><input type="checkbox" name="times" value="Weekend afternoons"><span>Weekend afternoons</span></label>
             </fieldset></div>
+          <div class="field full"><label for="f-plan">Plan you are interested in</label>
+            <select id="f-plan" name="plan"><option>Not sure yet</option><option>Foundation</option><option>Contender</option><option>Elite</option></select></div>
           <div class="field full"><label for="f-notes">Anything we should know? (optional)</label><textarea id="f-notes" name="notes" rows="3" placeholder="Scored 96 on AMC 10A last year, wants to qualify for AIME."></textarea></div>
           <p class="err" id="f-err" hidden></p>
           <div class="field full" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
@@ -807,6 +817,18 @@ footer a{color:var(--ink-2)}
   document.querySelectorAll("[data-cur]").forEach(function(b){b.addEventListener("click",function(){cur=b.dataset.cur;renderPrices();});});
   renderPrices();
 
+  // Plan cards: clicking a card or its button picks that plan for the trial form
+  var planSel=document.getElementById("f-plan");
+  document.querySelectorAll(".plan").forEach(function(card){
+    var btn=card.querySelector(".plan-btn");
+    function pick(){
+      document.querySelectorAll(".plan").forEach(function(c){c.classList.toggle("picked",c===card);});
+      if(planSel) planSel.value=btn.dataset.plan;
+    }
+    btn.addEventListener("click",pick);
+    card.addEventListener("click",function(e){ if(e.target.closest("a,button")) return; pick(); document.getElementById("book").scrollIntoView({behavior:"smooth"}); });
+  });
+
   // Booking form
   var form=document.getElementById("trial-form"), err=document.getElementById("f-err");
   try{ var tz=Intl.DateTimeFormat().resolvedOptions().timeZone; if(tz) document.getElementById("f-tz").value=tz; }catch(e){}
@@ -821,7 +843,7 @@ footer a{color:var(--ink-2)}
     }
     err.hidden=true;
     var times=d.getAll("times").join(", ")||"any time";
-    var payload={_subject:"New Medalwise trial request",_template:"table",_captcha:"false",student:name,email:email,country:d.get("country"),grade:d.get("grade"),exam:d.get("exam"),tz:d.get("tz"),times:times,notes:d.get("notes")};
+    var payload={_subject:"New Medalwise trial request",_template:"table",_captcha:"false",student:name,email:email,country:d.get("country"),grade:d.get("grade"),exam:d.get("exam"),plan:d.get("plan"),tz:d.get("tz"),times:times,notes:d.get("notes")};
     function showDone(sent){
       form.innerHTML="";
       var box=document.createElement("div"); box.className="done";
