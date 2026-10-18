@@ -348,8 +348,12 @@ footer a{color:var(--ink-2)}
 /* ---- multi-country, multi-subject ---- */
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .country-pick{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);border-radius:999px;padding:4px 6px 4px 10px;color:var(--ink-2);background:var(--sheet)}
-.country-pick:focus-within{border-color:var(--blue)}
-.country-select,.exam-country select{font:700 .9rem var(--body);border:0;background:transparent;color:var(--ink);padding:6px 4px;cursor:pointer;width:auto;border-radius:6px}
+.country-select,.exam-country select{font:700 .9rem var(--body);border:0;color:var(--ink);padding:6px 26px 6px 2px;cursor:pointer;width:auto;border-radius:999px;outline:none;-webkit-appearance:none;appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234a5573' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 8px center}
+.country-select:focus-visible,.exam-country select:focus-visible{outline:none}
+/* the whole pill shows focus instead of a box inside it */
+.country-pick,.exam-country{cursor:pointer;transition:border-color .2s ease, box-shadow .2s ease}
+.country-pick:hover,.exam-country:hover{border-color:var(--blue)}
+.country-pick:focus-within,.exam-country:focus-within{border-color:var(--blue);box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 18%,transparent)}
 .country-select option,.exam-country select option{color:#141c33;background:#fff}
 @media (max-width:860px){.nav{gap:10px}.country-pick{padding:2px 4px 2px 8px}.country-select{font-size:.85rem;max-width:122px}}
 @media (max-width:420px){.nav a.btn{display:none}}
@@ -368,6 +372,46 @@ footer a{color:var(--ink-2)}
 :root[data-theme="dark"] .s-astro{--subj:#b197fc}:root[data-theme="dark"] .s-entr{--subj:#ffc078}
 .hero .subjects .s-math{--subj:#91a7ff}.hero .subjects .s-phys{--subj:#ffa94d}.hero .subjects .s-chem{--subj:#8ce99a}.hero .subjects .s-bio{--subj:#faa2c1}.hero .subjects .s-astro{--subj:#b197fc}.hero .subjects .s-code{--subj:#66d9e8}.hero .subjects .s-entr{--subj:#ffc078}
 .ladders{min-height:200px}
+
+/* ---- phone layout ---- */
+@media (max-width:640px){
+  section{padding-block:52px}
+  .section-head{margin-bottom:24px}
+  .country-select{min-height:40px}
+  .potw-tabs button{min-height:40px;padding:8px 14px}
+  .choices button{min-height:44px}
+  /* subject filter: one swipeable row instead of a wrapped box */
+  .exam-bar{display:grid;gap:12px}
+  .exam-bar .tabs{display:flex;flex-wrap:nowrap;overflow-x:auto;border:0;padding:2px;gap:8px;background:transparent;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;border-radius:0}
+  .exam-bar .tabs::-webkit-scrollbar{display:none}
+  .exam-bar .tabs button{flex:none;border:1.5px solid var(--line);background:var(--sheet);min-height:42px}
+  .exam-bar .tabs button[aria-selected="true"]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+  .exam-country{justify-self:start}
+  .ladders{grid-template-columns:1fr}
+  /* season: vertical timeline */
+  .season{padding:20px;overflow:visible}
+  .season-track{grid-template-columns:1fr;min-width:0;gap:18px}
+  .season-track::before{left:7px;right:auto;top:8px;bottom:8px;width:2px;height:auto}
+  .stage{grid-template-columns:16px 1fr;column-gap:14px;row-gap:2px;padding:0}
+  .stage .dot{grid-row:1 / span 3;grid-column:1;margin-top:2px}
+  .stage .m{grid-column:2;height:auto}
+  .stage h3,.stage p{grid-column:2;margin:0}
+  /* comparison: one card per row */
+  .compare table{min-width:0}
+  .compare thead{display:none}
+  .compare tr{display:grid;grid-template-columns:1fr;padding:14px 16px;border-bottom:1px solid var(--line)}
+  .compare tr:last-child{border-bottom:0}
+  .compare th,.compare td{display:block;padding:2px 0;border:0;background:none!important}
+  .compare th[scope=row]{font-family:var(--display);font-size:1.02rem;margin-bottom:4px}
+  .compare td.them::before{content:"Typical site: ";font-weight:700}
+  .compare td.them{font-size:.9rem}
+  /* hero: tighter */
+  .hero .lede{font-size:1.05rem}
+  .hero-ctas .btn{flex:1 1 100%}
+  .float{display:none}
+  .plan{padding:22px}
+  .book{padding:24px 18px;border-radius:20px}
+}
 </style>
 </head>
 <body>
