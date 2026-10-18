@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Medalwise: one-to-one Olympiad coaching">
+<meta property="og:description" content="Live online coaching for AMC, AIME, MATHCOUNTS, USACO, F=ma, CEMC and COMC. Free 30-minute trial.">
+<meta property="og:type" content="website">
+<title>Medalwise</title>
+<meta name="description" content="Live one-to-one Olympiad coaching for students in the USA and Canada: AMC, AIME, MATHCOUNTS, USACO, F=ma, CEMC and COMC. Free 30-minute trial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: graph-paper page; a contest-ladder spine runs through the exams; gold only marks the goal (the medal). */
+:root{
+  --paper:#f5f7fb;
+  --sheet:#ffffff;
+  --ink:#141c33;
+  --ink-2:#4a5573;
+  --grid:#dfe5f1;
+  --line:#c9d2e4;
+  --blue:#2f4fb0;
+  --blue-soft:#e6ecfa;
+  --gold:#b07d10;
+  --gold-soft:#f7edd3;
+  --good:#1f7a4d;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --r:10px;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0e1324; --sheet:#151c33; --ink:#e8ecf7; --ink-2:#a3adc8; --grid:#1c2440; --line:#2c3657;
+    --blue:#8ea8ff; --blue-soft:#1d2850; --gold:#e3b54a; --gold-soft:#3a2f12; --good:#5fd39a; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0e1324; --sheet:#151c33; --ink:#e8ecf7; --ink-2:#a3adc8; --grid:#1c2440; --line:#2c3657;
+  --blue:#8ea8ff; --blue-soft:#1d2850; --gold:#e3b54a; --gold-soft:#3a2f12; --good:#5fd39a; color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{transition:none!important;animation:none!important}}
+body{
+  margin:0; background:var(--paper); color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.6;
+  background-image:linear-gradient(var(--grid) 1px, transparent 1px),linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size:28px 28px; background-attachment:fixed;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--sheet)}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.2rem, 5.4vw, 3.9rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem, 3.4vw, 2.5rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:600}
+.lede{font-size:1.15rem;color:var(--ink-2);max-width:60ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 1rem/1 var(--body);padding:14px 22px;border-radius:999px;text-decoration:none;border:2px solid var(--ink);cursor:pointer;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-ghost{background:transparent;color:var(--ink)}
+section{padding-block:72px}
+.section-head{display:grid;gap:12px;margin-bottom:36px;max-width:720px}
+
+/* header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb, var(--sheet) 92%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:-.01em}
+.logo svg{flex:none}
+.nav{display:flex;gap:22px;margin-left:auto;align-items:center}
+.nav a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem}
+.nav a:hover{color:var(--blue)}
+.nav a.btn{padding:10px 16px;font-size:.92rem;color:var(--paper)}
+@media (max-width:860px){.nav a:not(.btn){display:none}}
+
+/* hero */
+.hero{padding-block:64px 56px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero-copy{display:grid;gap:22px;min-width:0}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;padding:0;margin:4px 0 0;list-style:none;color:var(--ink-2);font-size:.95rem}
+.facts li{display:flex;gap:8px;align-items:center}
+.facts li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+
+/* problem card */
+.potw{background:var(--sheet);border:1.5px solid var(--ink);border-radius:var(--r);padding:24px;display:grid;gap:14px;box-shadow:6px 6px 0 var(--blue-soft);min-width:0}
+.potw-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.potw .tag{font-family:var(--mono);font-size:.75rem;background:var(--blue-soft);color:var(--blue);padding:4px 8px;border-radius:6px;font-weight:600}
+.potw .q{font-size:1.08rem}
+.choices{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.choices button{font:600 .95rem var(--mono);padding:10px 4px;border-radius:8px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.choices button:hover{border-color:var(--blue)}
+.choices button.right{border-color:var(--good);background:color-mix(in srgb, var(--good) 14%, transparent)}
+.choices button.wrong{border-color:var(--line);opacity:.55;text-decoration:line-through}
+.potw-sol{font-size:.95rem;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:12px}
+.potw-foot{font-size:.85rem;color:var(--ink-2)}
+@media (max-width:420px){.choices{grid-template-columns:repeat(3,1fr)}}
+
+/* exams */
+.tabs{display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;padding:4px;gap:4px;margin-bottom:28px;background:var(--sheet)}
+.tabs button{font:700 .95rem var(--body);border:0;background:transparent;color:var(--ink);padding:10px 18px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.ladders{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.ladder{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:14px;align-content:start;min-width:0}
+.ladder-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.ladder-head span{font-size:.85rem;color:var(--ink-2)}
+.rungs{list-style:none;margin:0;padding:0;display:grid;gap:0;position:relative}
+.rungs li{display:grid;grid-template-columns:18px 1fr auto;gap:12px;align-items:center;padding:7px 0;position:relative}
+.rungs li::before{content:"";width:12px;height:12px;border-radius:50%;border:2px solid var(--blue);background:var(--sheet);justify-self:center;z-index:1}
+.rungs li:not(:last-child)::after{content:"";position:absolute;left:8px;top:50%;height:100%;width:2px;background:var(--line)}
+.rungs li:last-child::before{background:var(--gold);border-color:var(--gold)}
+.rungs .name{font-weight:700}
+.rungs .when{font-family:var(--mono);font-size:.78rem;color:var(--ink-2);white-space:nowrap}
+.fine{font-size:.85rem;color:var(--ink-2);margin-top:18px}
+
+/* season */
+.season{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:28px;overflow-x:auto}
+.season-track{display:grid;grid-template-columns:repeat(6,minmax(140px,1fr));gap:0;min-width:840px;position:relative}
+.season-track::before{content:"";position:absolute;left:0;right:0;top:46px;height:2px;background:var(--line)}
+.stage{display:grid;gap:8px;padding-right:14px;align-content:start}
+.stage .m{font-family:var(--mono);font-size:.78rem;color:var(--ink-2);height:24px}
+.stage .dot{width:16px;height:16px;border-radius:50%;background:var(--sheet);border:3px solid var(--blue);position:relative;z-index:1}
+.stage.exam .dot{border-color:var(--gold);background:var(--gold)}
+.stage h3{font-size:1.02rem;margin-top:6px}
+.stage p{font-size:.92rem;color:var(--ink-2)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:step;list-style:none;margin:0;padding:0}
+.steps li{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:10px;align-content:start;min-width:0}
+.steps li::before{counter-increment:step;content:counter(step);font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--blue)}
+.steps p{color:var(--ink-2);font-size:.96rem}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* coaches */
+.coach-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.checks li{display:grid;grid-template-columns:28px 1fr;gap:12px}
+.checks li::before{content:"✓";display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--blue-soft);color:var(--blue);font-weight:700}
+.checks b{display:block}
+.checks span{color:var(--ink-2);font-size:.95rem}
+.profile{background:var(--sheet);border:1.5px dashed var(--line);border-radius:var(--r);padding:22px;display:grid;gap:16px}
+.profile-top{display:flex;gap:16px;align-items:center}
+.avatar{width:64px;height:64px;border-radius:50%;background:var(--blue-soft);display:grid;place-items:center;font-family:var(--display);font-weight:800;color:var(--blue);flex:none}
+.profile .label{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-size:.82rem;font-weight:700;padding:5px 10px;border-radius:999px;background:var(--blue-soft);color:var(--blue)}
+.pill.gold{background:var(--gold-soft);color:var(--gold)}
+.profile dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:0;font-size:.95rem}
+.profile dt{color:var(--ink-2)}
+.profile dd{margin:0;font-weight:700}
+@media (max-width:860px){.coach-grid{grid-template-columns:1fr}}
+
+/* pricing */
+.price-bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center;margin-bottom:24px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.plan{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:grid;gap:14px;align-content:start;min-width:0}
+.plan.featured{border:2px solid var(--ink)}
+.plan .who{color:var(--ink-2);font-size:.95rem;min-height:3em}
+.amount{font-family:var(--display);font-weight:800;font-size:2.6rem;line-height:1;font-variant-numeric:tabular-nums}
+.amount small{font-family:var(--body);font-size:.95rem;font-weight:400;color:var(--ink-2)}
+.pack{font-size:.92rem;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.pack b{color:var(--good)}
+.plan ul{margin:0;padding-left:20px;display:grid;gap:6px;font-size:.95rem}
+.badge{justify-self:start;font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--paper);padding:4px 8px;border-radius:6px}
+.policy{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px;font-size:.93rem;color:var(--ink-2)}
+.policy b{color:var(--ink);display:block}
+@media (max-width:900px){.plans,.policy{grid-template-columns:1fr}}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:820px}
+.faq details{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:16px 20px}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--blue)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:10px;color:var(--ink-2)}
+
+/* booking */
+.book{background:var(--ink);color:var(--paper);border-radius:16px;padding:40px;display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+.book .eyebrow{color:var(--gold)}
+.book .lede{color:color-mix(in srgb, var(--paper) 78%, transparent)}
+.book-copy{display:grid;gap:16px;align-content:start}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:grid;gap:6px;min-width:0}
+.field.full{grid-column:1 / -1}
+label,.legend{font-size:.88rem;font-weight:700}
+input,select,textarea{font:inherit;font-size:1rem;padding:11px 12px;border-radius:8px;border:1.5px solid color-mix(in srgb, var(--paper) 30%, transparent);background:color-mix(in srgb, var(--paper) 8%, transparent);color:var(--paper);width:100%}
+select option{color:#141c33;background:#ffffff}
+input::placeholder,textarea::placeholder{color:color-mix(in srgb, var(--paper) 50%, transparent)}
+fieldset{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;inset:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.chip span{display:inline-block;padding:8px 12px;border-radius:999px;border:1.5px solid color-mix(in srgb, var(--paper) 30%, transparent);font-size:.9rem;cursor:pointer}
+.chip input:checked + span{background:var(--gold);border-color:var(--gold);color:#141c33;font-weight:700}
+.chip input:focus-visible + span{outline:3px solid var(--gold);outline-offset:2px}
+.book .btn{background:var(--gold);border-color:var(--gold);color:#141c33}
+.form-note{font-size:.85rem;color:color-mix(in srgb, var(--paper) 70%, transparent)}
+.done{grid-column:1 / -1;background:color-mix(in srgb, var(--paper) 10%, transparent);border:1.5px solid var(--gold);border-radius:10px;padding:18px;display:grid;gap:8px}
+.err{color:#ffb4a8;font-size:.88rem;grid-column:1 / -1}
+@media (max-width:900px){.book{grid-template-columns:1fr;padding:28px}}
+@media (max-width:520px){form{grid-template-columns:1fr}}
+
+/* footer */
+footer{padding-block:40px 56px;border-top:1px solid var(--line);background:var(--sheet)}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px;font-size:.92rem;color:var(--ink-2)}
+footer h3{font-size:1rem;color:var(--ink);margin-bottom:8px}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+footer a{color:var(--ink-2)}
+@media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Medalwise home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path d="M9 2h5l2 7-4 3zM23 2h-5l-2 7 4 3z" fill="var(--blue)"/><circle cx="16" cy="20" r="10" fill="var(--gold)"/><circle cx="16" cy="20" r="6.5" fill="none" stroke="var(--sheet)" stroke-width="1.6"/><path d="M14.4 17.4l2.4-1.4v8" stroke="var(--sheet)" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Medalwise
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#exams">Exams</a>
+      <a href="#how">How it works</a>
+      <a href="#coaches">Coaches</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="#book">Book a free trial</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">One-to-one Olympiad coaching · USA &amp; Canada</p>
+        <h1>Train for the contest with a coach who has competed in it.</h1>
+        <p class="lede">Live online lessons for grades 5 to 12, planned backwards from the real contest calendar. One student, one coach, every week: AMC, AIME, MATHCOUNTS, USACO, F=ma, CEMC and COMC.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#book">Book a free 30-minute trial</a>
+          <a class="btn btn-ghost" href="#pricing">See prices</a>
+        </div>
+        <ul class="facts">
+          <li>From $39 per hour, prices shown upfront</li>
+          <li>Evening and weekend slots in ET, CT, MT and PT</li>
+          <li>Same coach every week</li>
+        </ul>
+      </div>
+
+      <aside class="potw" aria-labelledby="potw-title">
+        <div class="potw-top">
+          <h3 id="potw-title">Problem of the week</h3>
+          <span class="tag">AMC 10 level</span>
+        </div>
+        <p class="q">For how many positive integers <i>n</i> ≤ 100 is <i>n</i>² + <i>n</i> + 1 divisible by 7?</p>
+        <div class="choices" role="group" aria-label="Answer choices">
+          <button type="button" data-c="A">(A) 26</button>
+          <button type="button" data-c="B">(B) 27</button>
+          <button type="button" data-c="C">(C) 28</button>
+          <button type="button" data-c="D">(D) 29</button>
+          <button type="button" data-c="E">(E) 30</button>
+        </div>
+        <p class="potw-sol" id="potw-sol" hidden>Answer: (D) 29. Check residues mod 7: only <i>n</i> ≡ 2 (4+2+1 = 7) and <i>n</i> ≡ 4 (16+4+1 = 21) work. Up to 100 there are 15 numbers ≡ 2 and 14 numbers ≡ 4, so 29 in total.</p>
+        <p class="potw-foot">Pick an answer to see the solution. A new problem goes up every Monday.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="exams">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Exams we coach</p>
+        <h2>Every contest ladder, from the first round to the national final.</h2>
+        <p class="lede">Pick your country to see the path. Your coach plans lessons around the next rung on your ladder.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Country">
+        <button role="tab" id="tab-us" aria-selected="true" aria-controls="panel-us">United States</button>
+        <button role="tab" id="tab-ca" aria-selected="false" aria-controls="panel-ca">Canada</button>
+      </div>
+
+      <div class="ladders" id="panel-us" role="tabpanel" aria-labelledby="tab-us">
+        <article class="ladder">
+          <div class="ladder-head"><h3>Mathematics</h3><span>Grades 5–12</span></div>
+          <ol class="rungs">
+            <li><span class="name">AMC 8</span><span class="when">Jan</span></li>
+            <li><span class="name">AMC 10 / AMC 12</span><span class="when">Nov</span></li>
+            <li><span class="name">AIME</span><span class="when">Feb</span></li>
+            <li><span class="name">USAJMO / USAMO</span><span class="when">Mar</span></li>
+          </ol>
+        </article>
+        <article class="ladder">
+          <div class="ladder-head"><h3>MATHCOUNTS</h3><span>Grades 6–8</span></div>
+          <ol class="rungs">
+            <li><span class="name">School and Chapter</span><span class="when">Feb</span></li>
+            <li><span class="name">State</span><span class="when">Mar</span></li>
+            <li><span class="name">National</span><span class="when">May</span></li>
+          </ol>
+        </article>
+        <article class="ladder">
+          <div class="ladder-head"><h3>Computing</h3><span>Grades 6–12</span></div>
+          <ol class="rungs">
+            <li><span class="name">USACO Bronze</span><span class="when">Dec–Mar</span></li>
+            <li><span class="name">Silver</span><span class="when">Dec–Mar</span></li>
+            <li><span class="name">Gold</span><span class="when">Dec–Mar</span></li>
+            <li><span class="name">Platinum and Camp</span><span class="when">Spring</span></li>
+          </ol>
+        </article>
+        <article class="ladder">
+          <div class="ladder-head"><h3>Physics</h3><span>Grades 9–12</span></div>
+          <ol class="rungs">
+            <li><span class="name">F=ma</span><span class="when">Jan–Feb</span></li>
+            <li><span class="name">USAPhO</span><span class="when">Apr</span></li>
+            <li><span class="name">US Physics Team camp</span><span class="when">Summer</span></li>
+          </ol>
+        </article>
+        <article class="ladder">
+          <div class="ladder-head"><h3>Chemistry</h3><span>Grades 9–12</span></div>
+          <ol class="rungs">
+            <li><span class="name">USNCO Local exam</span><span class="when">Mar</span></li>
+            <li><span class="name">USNCO National exam</span><span class="when">Apr</span></li>
+            <li><span class="name">Study camp</span><span class="when">Summer</span></li>
+          </ol>
+        </article>
+        <article class="ladder">
+          <div class="ladder-head"><h3>Biology</h3><span>Grades 9–12</span></div>
+          <ol class="rungs">
+            <li><span class="name">USABO Open exam</span><span class="when">Feb</span></li>
+            <li><span class="name">Semifinal</span><span class="when">Mar</span></li>
+            <li><span class="name">National Finals</span><span class="when">Summer</span></li>
+          </ol>
+        </article>
+      </div>
+
+      <div class="ladders" id="panel-ca" role="tabpanel" aria-labelledby="tab-ca" hidden>
+        <article class="ladder">
+          <div class="ladder-head"><h3>CEMC math contests</h3><span>Grades 7–12</span></div>
+          <ol class="rungs">
+            <li><span class="name">Gauss (Gr 7–8)</span><span class="when">May</span></li>
+            <li><span class="name">Pascal / Cayley / Fermat</span><span class="when">Feb</span></li>
+            <li><span class="name">Euclid</span><span class="when">Apr</span></li>
+          </ol>
+        </article>
+        <article class="ladder">
+          <div class="ladder-head"><h3>Canadian Math Olympiad</h3><span>Grades 8–12</span></div>
+          <ol class="rungs">
+            <li><span class="name">COMC</span><span class="when">Oct–Nov</span></li>
+            <li><span class="name">CMO Qualifying (CMOQR)</span><span class="when">Winter</span></li>
+            <li><span class="name">CMO</span><span class="when">Mar</span></li>
+          </ol>
+        </article>
+        <article class="ladder">
+          <div class="ladder-head"><h3>Computing</h3><span>Grades 8–12</span></div>
+          <ol class="rungs">
+            <li><span class="name">CCC Junior / Senior</span><span class="when">Feb</span></li>
+            <li><span class="name">CCO</span><span class="when">May</span></li>
+          </ol>
+        </article>
+        <article class="ladder">
+          <div class="ladder-head"><h3>Physics and chemistry</h3><span>Grades 11–12</span></div>
+          <ol class="rungs">
+            <li><span class="name">Sir Isaac Newton (SIN) exam</span><span class="when">May</span></li>
+            <li><span class="name">CAP High School Prize Exam</span><span class="when">Spring</span></li>
+            <li><span class="name">Canadian Chemistry Olympiad</span><span class="when">Spring</span></li>
+          </ol>
+        </article>
+        <article class="ladder">
+          <div class="ladder-head"><h3>US contests from Canada</h3><span>Grades 6–12</span></div>
+          <ol class="rungs">
+            <li><span class="name">AMC 8 / 10 / 12</span><span class="when">Nov–Jan</span></li>
+            <li><span class="name">USACO (open worldwide)</span><span class="when">Dec–Mar</span></li>
+          </ol>
+        </article>
+      </div>
+      <p class="fine">Months are typical. Your coach confirms each season's exact dates with the official organizers.</p>
+    </div>
+  </section>
+
+  <section id="season">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">A season, planned backwards</p>
+        <h2>What an AMC 10 to AIME year looks like.</h2>
+        <p class="lede">Every student gets a season plan in the first week. This is the shape of a typical one; yours depends on the diagnostic.</p>
+      </div>
+      <div class="season" tabindex="0" aria-label="Season plan from August to February">
+        <div class="season-track">
+          <div class="stage"><span class="m">Aug</span><span class="dot"></span><h3>Diagnostic</h3><p>A timed past paper shows which topics cost the most points.</p></div>
+          <div class="stage"><span class="m">Sep–Oct</span><span class="dot"></span><h3>Foundations</h3><p>Number theory, counting, geometry and algebra, weakest first.</p></div>
+          <div class="stage"><span class="m">Oct–Nov</span><span class="dot"></span><h3>Mock sprint</h3><p>Weekly 75-minute mocks with review of every missed problem.</p></div>
+          <div class="stage exam"><span class="m">Nov</span><span class="dot"></span><h3>AMC 10</h3><p>Pacing plan and a light final week.</p></div>
+          <div class="stage"><span class="m">Dec–Jan</span><span class="dot"></span><h3>AIME build</h3><p>Longer problems, proof-style thinking, 3-hour practice sets.</p></div>
+          <div class="stage exam"><span class="m">Feb</span><span class="dot"></span><h3>AIME</h3><p>Target score set in the season plan.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>From first call to weekly lessons in four steps.</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Free 30-minute trial</h3><p>Your child solves a few problems with a coach. You get an honest read on their level.</p></li>
+        <li><h3>Matched coach and plan</h3><p>We pair them with a coach for their exam and send a season plan with target scores.</p></li>
+        <li><h3>Weekly live lessons</h3><p>Video call with a shared whiteboard. Every lesson is recorded so they can rewatch it.</p></li>
+        <li><h3>Monthly parent report</h3><p>Topics covered, mock scores, homework done and what comes next.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="coaches">
+    <div class="wrap coach-grid">
+      <div class="section-head" style="margin:0">
+        <p class="eyebrow">Our coaches</p>
+        <h2>We only hire people who have been on the ladder themselves.</h2>
+        <p class="lede">We recruit from India's national Olympiad and JEE programs, among the most competitive contest systems in the world.</p>
+        <ul class="checks" style="margin-top:12px">
+          <li><div><b>Proven contest record</b><span>National Olympiad qualifier or medalist (INMO, INPhO, INChO, INOI) or a top JEE Advanced rank. We verify certificates.</span></div></li>
+          <li><div><b>Passed a recorded mock lesson</b><span>Clear English, patient explanations, and they make students do the thinking.</span></div></li>
+          <li><div><b>Background checked</b><span>Every coach agrees to our child-safety policy. Parents are welcome to sit in on any lesson.</span></div></li>
+          <li><div><b>Reviewed every term</b><span>We watch recordings and read parent feedback. Coaches who fall short stop teaching.</span></div></li>
+        </ul>
+      </div>
+      <div class="profile" aria-label="Example of a coach profile">
+        <p class="label">Example: what every coach profile shows</p>
+        <div class="profile-top">
+          <div class="avatar" aria-hidden="true">AB</div>
+          <div>
+            <h3>Coach name</h3>
+            <p style="color:var(--ink-2);font-size:.95rem">Degree, university, graduation year</p>
+          </div>
+        </div>
+        <div class="pills"><span class="pill gold">Verified: national Olympiad result</span><span class="pill">AMC 10/12</span><span class="pill">AIME</span></div>
+        <dl>
+          <dt>Teaches</dt><dd>Grades 7–12, contest math</dd>
+          <dt>Intro video</dt><dd>60 seconds, watch before you book</dd>
+          <dt>Parent rating</dt><dd>Shown after 5 reviews</dd>
+          <dt>Next open slot</dt><dd>Shown in your time zone</dd>
+          <dt>Price tier</dt><dd>Foundation, Contender or Elite</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="price-bar">
+        <div class="section-head" style="margin:0">
+          <p class="eyebrow">Pricing</p>
+          <h2>Clear prices. No contracts.</h2>
+          <p class="lede">Pay per 60-minute lesson, or buy a pack of 8 and save 10%. The first 30-minute trial is free.</p>
+        </div>
+        <div class="tabs" role="group" aria-label="Currency" style="margin:0">
+          <button type="button" data-cur="USD" aria-selected="true">USD</button>
+          <button type="button" data-cur="CAD" aria-selected="false">CAD</button>
+        </div>
+      </div>
+      <div class="plans">
+        <article class="plan" data-usd="39" data-cad="54">
+          <h3>Foundation</h3>
+          <p class="who">Getting started with contests: AMC 8, MATHCOUNTS, Gauss, USACO Bronze.</p>
+          <p class="amount"><span class="p">$39</span> <small>per lesson</small></p>
+          <p class="pack">Pack of 8: <span class="pk"></span> <b>save 10%</b></p>
+          <ul><li>Contest-trained coach</li><li>Season plan and homework</li><li>Lesson recordings</li><li>Monthly parent report</li></ul>
+        </article>
+        <article class="plan featured" data-usd="59" data-cad="82">
+          <span class="badge">Most chosen</span>
+          <h3>Contender</h3>
+          <p class="who">Aiming for AIME, the MATHCOUNTS State round, USACO Silver/Gold or F=ma.</p>
+          <p class="amount"><span class="p">$59</span> <small>per lesson</small></p>
+          <p class="pack">Pack of 8: <span class="pk"></span> <b>save 10%</b></p>
+          <ul><li>National Olympiad qualifier coach</li><li>Everything in Foundation</li><li>Monthly timed mock with review</li><li>Priority scheduling</li></ul>
+        </article>
+        <article class="plan" data-usd="99" data-cad="137">
+          <h3>Elite</h3>
+          <p class="who">Going for USAMO/USAJMO, CMO, USACO Platinum or USAPhO.</p>
+          <p class="amount"><span class="p">$99</span> <small>per lesson</small></p>
+          <p class="pack">Pack of 8: <span class="pk"></span> <b>save 10%</b></p>
+          <ul><li>Medalist or national-camp coach</li><li>Everything in Contender</li><li>Proof writing feedback</li><li>Messaging support between lessons</li></ul>
+        </article>
+      </div>
+      <div class="policy">
+        <p><b>Reschedule for free</b>Move a lesson up to 12 hours before it starts.</p>
+        <p><b>Refunds on packs</b>Unused lessons in a pack are refunded if you stop.</p>
+        <p><b>Siblings and friends</b>Ask about pairs of 2 to 3 students at a lower price each.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Questions parents ask</p>
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Our coaches are in India. How does that work with our time zone?</summary><p>Coaches teach early-morning shifts in India, which lines up with weekday evenings and weekend mornings in North America. Every slot you see on the booking page is shown in your local time.</p></details>
+        <details><summary>What happens in the free trial?</summary><p>A 30-minute video call. The coach asks your child to try a few contest problems, talks through their thinking, and tells you which level and tier fit. No card needed.</p></details>
+        <details><summary>What do we need for lessons?</summary><p>A laptop or tablet with a camera and a stable internet connection. A tablet with a stylus helps for writing on the shared whiteboard, but it is not required.</p></details>
+        <details><summary>Is the coaching only for students who are already strong?</summary><p>No. Many students start with AMC 8 or MATHCOUNTS with no contest experience. The Foundation tier is built for them.</p></details>
+        <details><summary>Can we switch coaches?</summary><p>Yes, at any time and at no cost. Tell us and we will suggest another coach for the same exam.</p></details>
+        <details><summary>How do you keep students safe online?</summary><p>All lessons are recorded and kept for 60 days, coaches are background checked, and parents can join any lesson. Coaches never contact students on personal accounts.</p></details>
+        <details><summary>Are you connected to the contest organizers?</summary><p>No. Medalwise is an independent coaching service and is not affiliated with the MAA, USACO, CEMC, the CMS or any other organizer.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="wrap">
+      <div class="book">
+        <div class="book-copy">
+          <p class="eyebrow">Free 30-minute trial</p>
+          <h2>Book a trial lesson</h2>
+          <p class="lede">Tell us the exam and when you are free. We will reply with two or three slots in your time zone within one working day.</p>
+        </div>
+        <form id="trial-form" novalidate data-endpoint="">
+          <div class="field"><label for="f-student">Student's first name</label><input id="f-student" name="student" autocomplete="off" required placeholder="Maya"></div>
+          <div class="field"><label for="f-email">Parent's email</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="parent@example.com"></div>
+          <div class="field"><label for="f-country">Country</label>
+            <select id="f-country" name="country"><option>United States</option><option>Canada</option><option>Other</option></select></div>
+          <div class="field"><label for="f-grade">Grade</label>
+            <select id="f-grade" name="grade"><option>5</option><option>6</option><option selected>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></div>
+          <div class="field full"><label for="f-exam">Main exam</label>
+            <select id="f-exam" name="exam">
+              <option>AMC 8</option><option selected>AMC 10 / 12 and AIME</option><option>MATHCOUNTS</option><option>USACO</option><option>F=ma / USAPhO</option><option>USNCO (chemistry)</option><option>USABO (biology)</option><option>CEMC contests (Gauss, Pascal, Cayley, Fermat, Euclid)</option><option>COMC / CMO</option><option>CCC / CCO</option><option>Not sure yet</option>
+            </select></div>
+          <div class="field full"><label for="f-tz">Your time zone</label><input id="f-tz" name="tz" value="America/New_York"></div>
+          <div class="field full"><span class="legend" id="times-label">Good times for lessons</span>
+            <fieldset aria-labelledby="times-label">
+              <label class="chip"><input type="checkbox" name="times" value="Weekday evenings" checked><span>Weekday evenings</span></label>
+              <label class="chip"><input type="checkbox" name="times" value="Weekend mornings"><span>Weekend mornings</span></label>
+              <label class="chip"><input type="checkbox" name="times" value="Weekend afternoons"><span>Weekend afternoons</span></label>
+            </fieldset></div>
+          <div class="field full"><label for="f-notes">Anything we should know? (optional)</label><textarea id="f-notes" name="notes" rows="3" placeholder="Scored 96 on AMC 10A last year, wants to qualify for AIME."></textarea></div>
+          <p class="err" id="f-err" hidden></p>
+          <div class="field full" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+            <button class="btn" type="submit">Request my free trial</button>
+            <span class="form-note">No payment needed for the trial.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top">Medalwise</a>
+      <p style="margin-top:10px">Live one-to-one Olympiad coaching for students in the USA and Canada.</p>
+      <p style="margin-top:10px">hello@medalwise.com</p>
+    </div>
+    <div>
+      <h3>Coaching</h3>
+      <ul><li><a href="#exams">Exams</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#coaches">Coaches</a></li><li><a href="#book">Free trial</a></li></ul>
+    </div>
+    <div>
+      <h3>Company</h3>
+      <ul><li><a href="#faq">FAQ</a></li><li>Privacy policy</li><li>Terms and refunds</li><li>Become a coach</li></ul>
+      <p style="margin-top:12px">© 2026 Medalwise. Not affiliated with any contest organizer.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Country tabs
+  var tabs=[["tab-us","panel-us"],["tab-ca","panel-ca"]];
+  tabs.forEach(function(t){
+    document.getElementById(t[0]).addEventListener("click",function(){
+      tabs.forEach(function(o){
+        var on=o[0]===t[0];
+        document.getElementById(o[0]).setAttribute("aria-selected",on);
+        document.getElementById(o[1]).hidden=!on;
+      });
+    });
+  });
+
+  // Problem of the week
+  var sol=document.getElementById("potw-sol");
+  document.querySelectorAll(".choices button").forEach(function(b){
+    b.addEventListener("click",function(){
+      document.querySelectorAll(".choices button").forEach(function(x){
+        x.classList.toggle("right",x.dataset.c==="D");
+        x.classList.toggle("wrong",x.dataset.c!=="D"&&x===b);
+      });
+      sol.hidden=false;
+    });
+  });
+
+  // Currency toggle
+  var cur="USD";
+  try{ if(Intl.DateTimeFormat().resolvedOptions().timeZone.match(/Toronto|Vancouver|Edmonton|Winnipeg|Halifax|Regina|St_Johns|Montreal/)) cur="CAD"; }catch(e){}
+  function money(n,c){return (c==="CAD"?"C$":"$")+n.toLocaleString("en-US");}
+  function renderPrices(){
+    document.querySelectorAll("[data-cur]").forEach(function(b){b.setAttribute("aria-selected",b.dataset.cur===cur);});
+    document.querySelectorAll(".plan").forEach(function(p){
+      var n=Number(cur==="CAD"?p.dataset.cad:p.dataset.usd);
+      p.querySelector(".p").textContent=money(n,cur);
+      p.querySelector(".pk").textContent=money(Math.round(n*8*0.9),cur);
+    });
+  }
+  document.querySelectorAll("[data-cur]").forEach(function(b){b.addEventListener("click",function(){cur=b.dataset.cur;renderPrices();});});
+  renderPrices();
+
+  // Booking form
+  var form=document.getElementById("trial-form"), err=document.getElementById("f-err");
+  try{ var tz=Intl.DateTimeFormat().resolvedOptions().timeZone; if(tz) document.getElementById("f-tz").value=tz; }catch(e){}
+  try{ var ctry=document.getElementById("f-country"); if(cur==="CAD") ctry.value="Canada"; }catch(e){}
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var d=new FormData(form);
+    var email=String(d.get("email")||"").trim(), name=String(d.get("student")||"").trim();
+    if(!name||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
+      err.textContent="Add the student's first name and a valid parent email so we can reply.";
+      err.hidden=false; return;
+    }
+    err.hidden=true;
+    var times=d.getAll("times").join(", ")||"any time";
+    var payload={student:name,email:email,country:d.get("country"),grade:d.get("grade"),exam:d.get("exam"),tz:d.get("tz"),times:times,notes:d.get("notes")};
+    function showDone(sent){
+      form.innerHTML="";
+      var box=document.createElement("div"); box.className="done";
+      var h=document.createElement("h3"); h.textContent=sent?"Request received":"Request ready";
+      var p=document.createElement("p");
+      p.textContent=sent
+        ? "Thanks. We will email "+email+" with trial slots for "+name+" ("+payload.exam+", grade "+payload.grade+") in "+payload.tz+", "+times.toLowerCase()+"."
+        : "This preview does not send requests yet. Once the site is live, "+email+" will get trial slots for "+name+" ("+payload.exam+", grade "+payload.grade+") in "+payload.tz+".";
+      box.appendChild(h); box.appendChild(p); form.appendChild(box);
+    }
+    var endpoint=form.dataset.endpoint;
+    if(!endpoint){ showDone(false); return; }
+    fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(payload)})
+      .then(function(r){ if(!r.ok) throw new Error(); showDone(true); })
+      .catch(function(){ err.textContent="We could not send your request. Please email hello@medalwise.com instead."; err.hidden=false; });
+  });
+})();
+</script>
+</body>
+</html>
