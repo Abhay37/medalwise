@@ -214,6 +214,129 @@ footer h3{font-size:1rem;color:var(--ink);margin-bottom:8px}
 footer ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
 footer a{color:var(--ink-2)}
 @media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
+
+/* ---- visual polish ---- */
+:root{--navy:#0d1530;--navy-2:#16224a;--subj:var(--blue)}
+.grad-text{background:linear-gradient(100deg,#ffd36b 0%,#f0a92e 55%,#ffe7a3 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* hero: deep navy stage with glow, grid and floating symbols */
+.hero{position:relative;overflow:hidden;color:#eef2ff;background:
+  radial-gradient(60% 70% at 85% 20%, rgba(240,169,46,.22), transparent 60%),
+  radial-gradient(55% 60% at 10% 90%, rgba(91,124,255,.35), transparent 60%),
+  linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);padding-block:84px 96px}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(80% 80% at 50% 40%,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(80% 80% at 50% 40%,#000 30%,transparent 80%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.hero .eyebrow{color:#ffd36b;display:inline-flex;gap:8px;align-items:center;justify-self:start;background:rgba(255,211,107,.1);border:1px solid rgba(255,211,107,.3);padding:6px 12px;border-radius:999px}
+.hero .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#5fd39a;box-shadow:0 0 0 4px rgba(95,211,154,.25)}
+.hero h1{color:#fff}
+.hero .lede{color:#c3cbe6}
+.hero .btn-primary{background:linear-gradient(135deg,#ffd36b,#f0a92e);border-color:transparent;color:#141c33;box-shadow:0 10px 30px -8px rgba(240,169,46,.6)}
+.hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.45)}
+.hero .btn-ghost:hover{background:rgba(255,255,255,.08)}
+.hero .facts{color:#c3cbe6}
+.hero .facts li::before{background:#ffd36b}
+.float{position:absolute;font-family:var(--display);font-weight:800;color:rgba(255,255,255,.07);pointer-events:none;user-select:none;animation:drift 12s ease-in-out infinite;z-index:0}
+.float.f1{top:12%;left:4%;font-size:5rem}
+.float.f2{bottom:8%;left:42%;font-size:4rem;animation-delay:-4s}
+.float.f3{top:8%;right:6%;font-size:3.4rem;animation-delay:-8s}
+.float.f4{bottom:14%;right:38%;font-size:3rem;animation-delay:-2s}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-18px) rotate(6deg)}}
+.hero .potw{border:0;box-shadow:0 30px 60px -20px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08);color:var(--ink);position:relative}
+.potw-wrap{position:relative;min-width:0}
+.medal-badge{position:absolute;top:-34px;left:-22px;width:76px;height:76px;z-index:2;filter:drop-shadow(0 10px 18px rgba(0,0,0,.35));animation:bob 5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-8px) rotate(4deg)}}
+.hero-stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:12px 32px;margin-top:6px}
+.hero-stats b{display:block;font-family:var(--display);font-size:1.7rem;color:#fff;line-height:1.1}
+.hero-stats span{font-size:.85rem;color:#9aa5c9}
+@media (max-width:520px){.hero{padding-block:56px 72px}.hero-stats{gap:10px 20px}.hero-stats b{font-size:1.4rem}.hero-stats span{font-size:.78rem}.hero .eyebrow{font-size:.66rem;letter-spacing:.08em}.medal-badge{left:-6px;width:58px;height:58px}}
+
+/* scrolling exam strip */
+.strip{background:var(--sheet);border-block:1px solid var(--line);overflow:hidden;padding-block:16px}
+.strip-track{display:flex;gap:44px;width:max-content;animation:marquee 38s linear infinite}
+.strip-track span{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--ink-2);white-space:nowrap;display:inline-flex;align-items:center;gap:44px}
+.strip-track span::after{content:"✦";color:var(--gold);font-size:.8rem}
+.strip:hover .strip-track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* promise tiles */
+.promises{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.promise{background:var(--sheet);border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;gap:10px;align-content:start;transition:transform .2s ease, box-shadow .2s ease}
+.promise:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(20,28,51,.35)}
+.icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue)}
+.icon svg{width:24px;height:24px}
+.promise p{color:var(--ink-2);font-size:.95rem}
+@media (max-width:900px){.promises{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.promises{grid-template-columns:1fr}}
+
+/* subject colours on ladders */
+.ladder{border-radius:16px;border-top:4px solid var(--subj);transition:transform .2s ease, box-shadow .2s ease}
+.ladder:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(20,28,51,.4)}
+.ladder .rungs li::before{border-color:var(--subj)}
+.ladder .rungs li:last-child::before{background:var(--gold);border-color:var(--gold)}
+.ladder h3{display:flex;align-items:center;gap:10px}
+.ladder h3::before{content:attr(data-g);display:grid;place-items:center;width:34px;height:34px;border-radius:10px;font-family:var(--mono);font-size:.95rem;background:color-mix(in srgb,var(--subj) 14%,transparent);color:var(--subj)}
+.s-math{--subj:#3b5bdb}.s-count{--subj:#7048e8}.s-code{--subj:#0c8599}.s-phys{--subj:#e8590c}.s-chem{--subj:#2f9e44}.s-bio{--subj:#c2255c}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .s-math{--subj:#91a7ff}:root:not([data-theme="light"]) .s-count{--subj:#b197fc}:root:not([data-theme="light"]) .s-code{--subj:#66d9e8}:root:not([data-theme="light"]) .s-phys{--subj:#ffa94d}:root:not([data-theme="light"]) .s-chem{--subj:#8ce99a}:root:not([data-theme="light"]) .s-bio{--subj:#faa2c1}}
+:root[data-theme="dark"] .s-math{--subj:#91a7ff}:root[data-theme="dark"] .s-count{--subj:#b197fc}:root[data-theme="dark"] .s-code{--subj:#66d9e8}:root[data-theme="dark"] .s-phys{--subj:#ffa94d}:root[data-theme="dark"] .s-chem{--subj:#8ce99a}:root[data-theme="dark"] .s-bio{--subj:#faa2c1}
+
+/* season + steps */
+.season{border-radius:16px}
+.stage.exam .dot{box-shadow:0 0 0 6px color-mix(in srgb,var(--gold) 22%,transparent)}
+.steps{position:relative}
+.steps li{border-radius:16px;transition:transform .2s ease, box-shadow .2s ease}
+.steps li:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(20,28,51,.4)}
+.steps li::before{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;font-size:1.25rem;color:#fff;background:linear-gradient(135deg,#5b7cff,#2f4fb0);box-shadow:0 8px 20px -8px rgba(47,79,176,.7)}
+.steps li:last-child::before{background:linear-gradient(135deg,#ffd36b,#f0a92e);color:#141c33}
+
+/* comparison */
+.compare{background:var(--sheet);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.compare table{width:100%;border-collapse:collapse;font-size:.98rem}
+.compare th,.compare td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.compare tr:last-child td{border-bottom:0}
+.compare thead th{font-family:var(--display);font-size:1.05rem;background:var(--blue-soft)}
+.compare thead th.us{background:var(--navy);color:#ffd36b}
+.compare td.us{background:color-mix(in srgb,var(--blue-soft) 45%,transparent);font-weight:700}
+.compare td.us::before{content:"✓ ";color:var(--good)}
+.compare td.them{color:var(--ink-2)}
+.compare-scroll{overflow-x:auto}
+.compare table{min-width:620px}
+
+/* coaches + profile */
+.profile{border-radius:16px;border-style:solid;box-shadow:0 24px 50px -30px rgba(20,28,51,.45)}
+.avatar{background:linear-gradient(135deg,#5b7cff,#2f4fb0);color:#fff}
+
+/* pricing */
+.plan{border-radius:18px;transition:transform .2s ease, box-shadow .2s ease}
+.plan:hover{transform:translateY(-4px);box-shadow:0 22px 44px -24px rgba(20,28,51,.45)}
+.plan.featured{border:2px solid transparent;background:linear-gradient(var(--sheet),var(--sheet)) padding-box,linear-gradient(135deg,#5b7cff,#f0a92e) border-box;box-shadow:0 26px 60px -28px rgba(47,79,176,.6);transform:translateY(-8px)}
+.plan.featured:hover{transform:translateY(-12px)}
+.badge{background:linear-gradient(135deg,#ffd36b,#f0a92e);color:#141c33}
+.plan ul{list-style:none;padding:0}
+.plan ul li{padding-left:26px;position:relative}
+.plan ul li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
+@media (max-width:900px){.plan.featured{transform:none}}
+
+/* faq + booking */
+.faq details{border-radius:14px;transition:border-color .2s ease, box-shadow .2s ease}
+.faq details[open]{border-color:var(--blue);box-shadow:0 12px 30px -22px rgba(47,79,176,.6)}
+.book{position:relative;overflow:hidden;border-radius:24px;background:radial-gradient(50% 70% at 100% 0%, rgba(240,169,46,.25), transparent 60%),radial-gradient(50% 70% at 0% 100%, rgba(91,124,255,.35), transparent 60%),linear-gradient(160deg,var(--navy),var(--navy-2));color:#eef2ff;--paper:#eef2ff}
+.book > *{position:relative}
+.book-points{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:10px;color:#c3cbe6}
+.book-points li{display:flex;gap:10px;align-items:center}
+.book-points li::before{content:"✓";display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:rgba(255,211,107,.15);color:#ffd36b;font-weight:700;flex:none}
+.book .btn{background:linear-gradient(135deg,#ffd36b,#f0a92e);border-color:transparent;box-shadow:0 10px 30px -8px rgba(240,169,46,.6)}
+
+/* scroll reveal (only when JS runs) */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* mobile sticky CTA */
+.mobile-cta{display:none}
+@media (max-width:860px){
+  .mobile-cta{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:30;justify-content:center;background:linear-gradient(135deg,#ffd36b,#f0a92e);color:#141c33;font-weight:700;text-decoration:none;padding:15px;border-radius:999px;box-shadow:0 12px 30px -8px rgba(0,0,0,.4);transition:transform .25s ease, opacity .25s ease}
+  .mobile-cta.away{transform:translateY(140%);opacity:0}
+  footer{padding-bottom:110px}
+}
 </style>
 </head>
 <body>
@@ -236,14 +359,23 @@ footer a{color:var(--ink-2)}
 
 <main id="top">
   <section class="hero">
+    <span class="float f1" aria-hidden="true">∑</span>
+    <span class="float f2" aria-hidden="true">π</span>
+    <span class="float f3" aria-hidden="true">√x</span>
+    <span class="float f4" aria-hidden="true">∫</span>
     <div class="wrap">
       <div class="hero-copy">
         <p class="eyebrow">One-to-one Olympiad coaching · USA &amp; Canada</p>
-        <h1>Train for the contest with a coach who has competed in it.</h1>
+        <h1>Train for the contest with a coach who has <span class="grad-text">competed in it.</span></h1>
         <p class="lede">Live online lessons for grades 5 to 12, planned backwards from the real contest calendar. One student, one coach, every week: AMC, AIME, MATHCOUNTS, USACO, F=ma, CEMC and COMC.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#book">Book a free 30-minute trial</a>
           <a class="btn btn-ghost" href="#pricing">See prices</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>1 : 1</b><span>one student, one coach</span></div>
+          <div><b>15+</b><span>contests covered</span></div>
+          <div><b>$0</b><span>for the 30-min trial</span></div>
         </div>
         <ul class="facts">
           <li>From $39 per hour, prices shown upfront</li>
@@ -252,6 +384,8 @@ footer a{color:var(--ink-2)}
         </ul>
       </div>
 
+      <div class="potw-wrap">
+      <svg class="medal-badge" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 2h12l4 16-9 6zM46 2H34l-4 16 9 6z" fill="#5b7cff"/><path d="M24 2h4l4 16-4 3zM40 2h-4l-4 16 4 3z" fill="#3b5bdb"/><circle cx="32" cy="40" r="20" fill="#f0a92e"/><circle cx="32" cy="40" r="15" fill="#ffd36b"/><path d="M32 30l3 6.2 6.8 1-4.9 4.8 1.2 6.8L32 45.6l-6.1 3.2 1.2-6.8-4.9-4.8 6.8-1z" fill="#f0a92e"/></svg>
       <aside class="potw" aria-labelledby="potw-title">
         <div class="potw-top">
           <h3 id="potw-title">Problem of the week</h3>
@@ -268,6 +402,29 @@ footer a{color:var(--ink-2)}
         <p class="potw-sol" id="potw-sol" hidden>Answer: (D) 29. Check residues mod 7: only <i>n</i> ≡ 2 (4+2+1 = 7) and <i>n</i> ≡ 4 (16+4+1 = 21) work. Up to 100 there are 15 numbers ≡ 2 and 14 numbers ≡ 4, so 29 in total.</p>
         <p class="potw-foot">Pick an answer to see the solution. A new problem goes up every Monday.</p>
       </aside>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-label="Contests we coach">
+    <div class="strip-track">
+      <span>AMC 8</span><span>AMC 10 / 12</span><span>AIME</span><span>USAJMO / USAMO</span><span>MATHCOUNTS</span><span>USACO</span><span>F=ma</span><span>USAPhO</span><span>USNCO</span><span>USABO</span><span>CEMC Gauss to Euclid</span><span>COMC</span><span>CMO</span><span>CCC / CCO</span>
+      <span aria-hidden="true">AMC 8</span><span aria-hidden="true">AMC 10 / 12</span><span aria-hidden="true">AIME</span><span aria-hidden="true">USAJMO / USAMO</span><span aria-hidden="true">MATHCOUNTS</span><span aria-hidden="true">USACO</span><span aria-hidden="true">F=ma</span><span aria-hidden="true">USAPhO</span><span aria-hidden="true">USNCO</span><span aria-hidden="true">USABO</span><span aria-hidden="true">CEMC Gauss to Euclid</span><span aria-hidden="true">COMC</span><span aria-hidden="true">CMO</span><span aria-hidden="true">CCC / CCO</span>
+    </div>
+  </div>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Why families choose Medalwise</p>
+        <h2>Built for contest students, not general homework help.</h2>
+      </div>
+      <div class="promises">
+        <article class="promise reveal"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></svg></span><h3>Coaches who competed</h3><p>National Olympiad qualifiers and top JEE rankers, with certificates verified.</p></article>
+        <article class="promise reveal"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><h3>A plan for the season</h3><p>Lessons planned backwards from the real contest date, with target scores.</p></article>
+        <article class="promise reveal"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></span><h3>Every lesson recorded</h3><p>Rewatch any lesson for 60 days. Parents can sit in whenever they like.</p></article>
+        <article class="promise reveal"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><h3>Your time zone</h3><p>Weekday evenings and weekend mornings across ET, CT, MT and PT.</p></article>
+      </div>
     </div>
   </section>
 
@@ -284,8 +441,8 @@ footer a{color:var(--ink-2)}
       </div>
 
       <div class="ladders" id="panel-us" role="tabpanel" aria-labelledby="tab-us">
-        <article class="ladder">
-          <div class="ladder-head"><h3>Mathematics</h3><span>Grades 5–12</span></div>
+        <article class="ladder reveal s-math">
+          <div class="ladder-head"><h3 data-g="∑">Mathematics</h3><span>Grades 5–12</span></div>
           <ol class="rungs">
             <li><span class="name">AMC 8</span><span class="when">Jan</span></li>
             <li><span class="name">AMC 10 / AMC 12</span><span class="when">Nov</span></li>
@@ -293,16 +450,16 @@ footer a{color:var(--ink-2)}
             <li><span class="name">USAJMO / USAMO</span><span class="when">Mar</span></li>
           </ol>
         </article>
-        <article class="ladder">
-          <div class="ladder-head"><h3>MATHCOUNTS</h3><span>Grades 6–8</span></div>
+        <article class="ladder reveal s-count">
+          <div class="ladder-head"><h3 data-g="#">MATHCOUNTS</h3><span>Grades 6–8</span></div>
           <ol class="rungs">
             <li><span class="name">School and Chapter</span><span class="when">Feb</span></li>
             <li><span class="name">State</span><span class="when">Mar</span></li>
             <li><span class="name">National</span><span class="when">May</span></li>
           </ol>
         </article>
-        <article class="ladder">
-          <div class="ladder-head"><h3>Computing</h3><span>Grades 6–12</span></div>
+        <article class="ladder reveal s-code">
+          <div class="ladder-head"><h3 data-g="&lt;/&gt;">Computing</h3><span>Grades 6–12</span></div>
           <ol class="rungs">
             <li><span class="name">USACO Bronze</span><span class="when">Dec–Mar</span></li>
             <li><span class="name">Silver</span><span class="when">Dec–Mar</span></li>
@@ -310,24 +467,24 @@ footer a{color:var(--ink-2)}
             <li><span class="name">Platinum and Camp</span><span class="when">Spring</span></li>
           </ol>
         </article>
-        <article class="ladder">
-          <div class="ladder-head"><h3>Physics</h3><span>Grades 9–12</span></div>
+        <article class="ladder reveal s-phys">
+          <div class="ladder-head"><h3 data-g="F">Physics</h3><span>Grades 9–12</span></div>
           <ol class="rungs">
             <li><span class="name">F=ma</span><span class="when">Jan–Feb</span></li>
             <li><span class="name">USAPhO</span><span class="when">Apr</span></li>
             <li><span class="name">US Physics Team camp</span><span class="when">Summer</span></li>
           </ol>
         </article>
-        <article class="ladder">
-          <div class="ladder-head"><h3>Chemistry</h3><span>Grades 9–12</span></div>
+        <article class="ladder reveal s-chem">
+          <div class="ladder-head"><h3 data-g="⚗">Chemistry</h3><span>Grades 9–12</span></div>
           <ol class="rungs">
             <li><span class="name">USNCO Local exam</span><span class="when">Mar</span></li>
             <li><span class="name">USNCO National exam</span><span class="when">Apr</span></li>
             <li><span class="name">Study camp</span><span class="when">Summer</span></li>
           </ol>
         </article>
-        <article class="ladder">
-          <div class="ladder-head"><h3>Biology</h3><span>Grades 9–12</span></div>
+        <article class="ladder reveal s-bio">
+          <div class="ladder-head"><h3 data-g="β">Biology</h3><span>Grades 9–12</span></div>
           <ol class="rungs">
             <li><span class="name">USABO Open exam</span><span class="when">Feb</span></li>
             <li><span class="name">Semifinal</span><span class="when">Mar</span></li>
@@ -337,39 +494,39 @@ footer a{color:var(--ink-2)}
       </div>
 
       <div class="ladders" id="panel-ca" role="tabpanel" aria-labelledby="tab-ca" hidden>
-        <article class="ladder">
-          <div class="ladder-head"><h3>CEMC math contests</h3><span>Grades 7–12</span></div>
+        <article class="ladder reveal s-math">
+          <div class="ladder-head"><h3 data-g="∑">CEMC math contests</h3><span>Grades 7–12</span></div>
           <ol class="rungs">
             <li><span class="name">Gauss (Gr 7–8)</span><span class="when">May</span></li>
             <li><span class="name">Pascal / Cayley / Fermat</span><span class="when">Feb</span></li>
             <li><span class="name">Euclid</span><span class="when">Apr</span></li>
           </ol>
         </article>
-        <article class="ladder">
-          <div class="ladder-head"><h3>Canadian Math Olympiad</h3><span>Grades 8–12</span></div>
+        <article class="ladder reveal s-count">
+          <div class="ladder-head"><h3 data-g="★">Canadian Math Olympiad</h3><span>Grades 8–12</span></div>
           <ol class="rungs">
             <li><span class="name">COMC</span><span class="when">Oct–Nov</span></li>
             <li><span class="name">CMO Qualifying (CMOQR)</span><span class="when">Winter</span></li>
             <li><span class="name">CMO</span><span class="when">Mar</span></li>
           </ol>
         </article>
-        <article class="ladder">
-          <div class="ladder-head"><h3>Computing</h3><span>Grades 8–12</span></div>
+        <article class="ladder reveal s-code">
+          <div class="ladder-head"><h3 data-g="&lt;/&gt;">Computing</h3><span>Grades 8–12</span></div>
           <ol class="rungs">
             <li><span class="name">CCC Junior / Senior</span><span class="when">Feb</span></li>
             <li><span class="name">CCO</span><span class="when">May</span></li>
           </ol>
         </article>
-        <article class="ladder">
-          <div class="ladder-head"><h3>Physics and chemistry</h3><span>Grades 11–12</span></div>
+        <article class="ladder reveal s-phys">
+          <div class="ladder-head"><h3 data-g="F">Physics and chemistry</h3><span>Grades 11–12</span></div>
           <ol class="rungs">
             <li><span class="name">Sir Isaac Newton (SIN) exam</span><span class="when">May</span></li>
             <li><span class="name">CAP High School Prize Exam</span><span class="when">Spring</span></li>
             <li><span class="name">Canadian Chemistry Olympiad</span><span class="when">Spring</span></li>
           </ol>
         </article>
-        <article class="ladder">
-          <div class="ladder-head"><h3>US contests from Canada</h3><span>Grades 6–12</span></div>
+        <article class="ladder reveal s-chem">
+          <div class="ladder-head"><h3 data-g="↗">US contests from Canada</h3><span>Grades 6–12</span></div>
           <ol class="rungs">
             <li><span class="name">AMC 8 / 10 / 12</span><span class="when">Nov–Jan</span></li>
             <li><span class="name">USACO (open worldwide)</span><span class="when">Dec–Mar</span></li>
@@ -407,10 +564,10 @@ footer a{color:var(--ink-2)}
         <h2>From first call to weekly lessons in four steps.</h2>
       </div>
       <ol class="steps">
-        <li><h3>Free 30-minute trial</h3><p>Your child solves a few problems with a coach. You get an honest read on their level.</p></li>
-        <li><h3>Matched coach and plan</h3><p>We pair them with a coach for their exam and send a season plan with target scores.</p></li>
-        <li><h3>Weekly live lessons</h3><p>Video call with a shared whiteboard. Every lesson is recorded so they can rewatch it.</p></li>
-        <li><h3>Monthly parent report</h3><p>Topics covered, mock scores, homework done and what comes next.</p></li>
+        <li class="reveal"><h3>Free 30-minute trial</h3><p>Your child solves a few problems with a coach. You get an honest read on their level.</p></li>
+        <li class="reveal"><h3>Matched coach and plan</h3><p>We pair them with a coach for their exam and send a season plan with target scores.</p></li>
+        <li class="reveal"><h3>Weekly live lessons</h3><p>Video call with a shared whiteboard. Every lesson is recorded so they can rewatch it.</p></li>
+        <li class="reveal"><h3>Monthly parent report</h3><p>Topics covered, mock scores, homework done and what comes next.</p></li>
       </ol>
     </div>
   </section>
@@ -449,6 +606,28 @@ footer a{color:var(--ink-2)}
     </div>
   </section>
 
+  <section id="compare">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The difference</p>
+        <h2>Medalwise compared with a typical tutoring site.</h2>
+      </div>
+      <div class="compare reveal"><div class="compare-scroll">
+        <table>
+          <thead><tr><th scope="col"></th><th scope="col" class="us">Medalwise</th><th scope="col">Typical tutoring site</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Who teaches</th><td class="us">Coaches with a verified contest record</td><td class="them">General subject tutors</td></tr>
+            <tr><th scope="row">Prices</th><td class="us">Shown on the page, USD and CAD</td><td class="them">"Contact us for a quote"</td></tr>
+            <tr><th scope="row">Lesson plan</th><td class="us">Season plan built from the contest calendar</td><td class="them">Lesson by lesson</td></tr>
+            <tr><th scope="row">Recordings</th><td class="us">Every lesson, kept 60 days</td><td class="them">Rarely offered</td></tr>
+            <tr><th scope="row">Progress for parents</th><td class="us">Monthly report with mock scores</td><td class="them">Ask the tutor</td></tr>
+            <tr><th scope="row">Commitment</th><td class="us">No contract, unused pack lessons refunded</td><td class="them">Prepaid packages</td></tr>
+          </tbody>
+        </table>
+      </div></div>
+    </div>
+  </section>
+
   <section id="pricing">
     <div class="wrap">
       <div class="price-bar">
@@ -463,14 +642,14 @@ footer a{color:var(--ink-2)}
         </div>
       </div>
       <div class="plans">
-        <article class="plan" data-usd="39" data-cad="54">
+        <article class="plan reveal" data-usd="39" data-cad="54">
           <h3>Foundation</h3>
           <p class="who">Getting started with contests: AMC 8, MATHCOUNTS, Gauss, USACO Bronze.</p>
           <p class="amount"><span class="p">$39</span> <small>per lesson</small></p>
           <p class="pack">Pack of 8: <span class="pk"></span> <b>save 10%</b></p>
           <ul><li>Contest-trained coach</li><li>Season plan and homework</li><li>Lesson recordings</li><li>Monthly parent report</li></ul>
         </article>
-        <article class="plan featured" data-usd="59" data-cad="82">
+        <article class="plan featured reveal" data-usd="59" data-cad="82">
           <span class="badge">Most chosen</span>
           <h3>Contender</h3>
           <p class="who">Aiming for AIME, the MATHCOUNTS State round, USACO Silver/Gold or F=ma.</p>
@@ -478,7 +657,7 @@ footer a{color:var(--ink-2)}
           <p class="pack">Pack of 8: <span class="pk"></span> <b>save 10%</b></p>
           <ul><li>National Olympiad qualifier coach</li><li>Everything in Foundation</li><li>Monthly timed mock with review</li><li>Priority scheduling</li></ul>
         </article>
-        <article class="plan" data-usd="99" data-cad="137">
+        <article class="plan reveal" data-usd="99" data-cad="137">
           <h3>Elite</h3>
           <p class="who">Going for USAMO/USAJMO, CMO, USACO Platinum or USAPhO.</p>
           <p class="amount"><span class="p">$99</span> <small>per lesson</small></p>
@@ -514,11 +693,12 @@ footer a{color:var(--ink-2)}
 
   <section id="book">
     <div class="wrap">
-      <div class="book">
+      <div class="book reveal">
         <div class="book-copy">
           <p class="eyebrow">Free 30-minute trial</p>
           <h2>Book a trial lesson</h2>
           <p class="lede">Tell us the exam and when you are free. We will reply with two or three slots in your time zone within one working day.</p>
+          <ul class="book-points"><li>No card or payment needed</li><li>Honest read on your child's level</li><li>A coach matched to the exam</li></ul>
         </div>
         <form id="trial-form" novalidate data-endpoint="https://formsubmit.co/ajax/rishiranjan3799@gmail.com">
           <div class="field"><label for="f-student">Student's first name</label><input id="f-student" name="student" autocomplete="off" required placeholder="Maya"></div>
@@ -569,8 +749,25 @@ footer a{color:var(--ink-2)}
   </div>
 </footer>
 
+<a class="mobile-cta" href="#book">Book a free trial</a>
+
 <script>
 (function(){
+  // Scroll reveal and mobile CTA
+  document.documentElement.classList.add("js");
+  var items=document.querySelectorAll(".reveal");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+    items.forEach(function(el){io.observe(el);});
+  } else items.forEach(function(el){el.classList.add("in");});
+  var cta=document.querySelector(".mobile-cta"), book=document.getElementById("book");
+  if(cta&&"IntersectionObserver" in window){
+    var seen={};
+    cta.classList.add("away");
+    var co=new IntersectionObserver(function(es){es.forEach(function(e){seen[e.target===book?"b":"h"]=e.isIntersecting;});cta.classList.toggle("away",Object.keys(seen).some(function(k){return seen[k];}));});
+    co.observe(document.querySelector(".hero")); co.observe(book);
+  }
+
   // Country tabs
   var tabs=[["tab-us","panel-us"],["tab-ca","panel-ca"]];
   tabs.forEach(function(t){
