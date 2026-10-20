@@ -8,7 +8,11 @@
 <meta property="og:title" content="Medalwise: one-to-one Olympiad coaching">
 <meta property="og:description" content="One-to-one coaching for maths, physics, chemistry, biology, astronomy and computing Olympiads, JEE and NEET. Free 30-minute trial.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://medalwise.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <title>Medalwise</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath d=%27M9 2h5l2 7-4 3zM23 2h-5l-2 7 4 3z%27 fill=%27%233b5bdb%27/%3E%3Ccircle cx=%2716%27 cy=%2720%27 r=%2710%27 fill=%27%23f0a92e%27/%3E%3Ccircle cx=%2716%27 cy=%2720%27 r=%276.5%27 fill=%27%23ffd36b%27/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0d1530">
 <meta name="description" content="Live one-to-one coaching for maths, physics, chemistry, biology, astronomy and computing Olympiads, JEE and NEET, with the exams of your country: USA, Canada, India, UK, Australia, Singapore and the Gulf. Free 30-minute trial.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -412,6 +416,51 @@ footer a{color:var(--ink-2)}
   .plan{padding:22px}
   .book{padding:24px 18px;border-radius:20px}
 }
+
+/* ---- level check, theme toggle ---- */
+.theme-btn{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:var(--sheet);color:var(--ink);cursor:pointer;flex:none;transition:border-color .2s ease, transform .2s ease}
+.theme-btn:hover{border-color:var(--blue);transform:rotate(-12deg)}
+.theme-btn .i-sun{display:none}
+:root[data-theme="dark"] .theme-btn .i-sun{display:block}:root[data-theme="dark"] .theme-btn .i-moon{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .theme-btn .i-sun{display:block}:root:not([data-theme="light"]) .theme-btn .i-moon{display:none}}
+.level{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center;background:var(--sheet);border:1px solid var(--line);border-radius:24px;padding:40px;box-shadow:0 30px 70px -40px rgba(20,28,51,.45);position:relative;overflow:hidden}
+.level::before{content:"";position:absolute;width:340px;height:340px;right:-120px;top:-140px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--gold) 22%,transparent),transparent 70%);pointer-events:none}
+.level-copy{display:grid;gap:16px;position:relative}
+.level-subjects{display:flex;flex-wrap:wrap;gap:8px}
+.level-subjects button{font:700 .95rem var(--body);min-height:44px;padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.level-subjects button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--sheet)}
+.quiz{position:relative;background:var(--paper);border:1.5px solid var(--line);border-radius:18px;padding:26px;display:grid;gap:18px;min-height:340px;align-content:start}
+.quiz-top{display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:.8rem;color:var(--ink-2)}
+.quiz-bar{flex:1;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.quiz-bar span{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#5b7cff,#f0a92e);transition:width .4s ease}
+.quiz-q{font-size:1.15rem;font-weight:700;line-height:1.45}
+.quiz-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.quiz-opts button{font:600 1rem var(--body);text-align:left;min-height:52px;padding:12px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--sheet);color:var(--ink);cursor:pointer;transition:border-color .15s ease, transform .15s ease, background .15s ease}
+.quiz-opts button:hover:not(:disabled){border-color:var(--blue);transform:translateY(-2px)}
+.quiz-opts button.right{border-color:var(--good);background:color-mix(in srgb,var(--good) 14%,var(--sheet))}
+.quiz-opts button.wrong{border-color:#e03131;background:color-mix(in srgb,#e03131 10%,var(--sheet))}
+.quiz-opts button:disabled{cursor:default}
+.quiz-result{display:grid;gap:12px;animation:pop .4s ease}
+@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+.quiz-score{font-family:var(--display);font-weight:800;font-size:3rem;line-height:1;background:linear-gradient(100deg,#5b7cff,#f0a92e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.quiz-result h3{font-size:1.4rem}
+.quiz-result p{color:var(--ink-2)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.quiz-book{background:linear-gradient(135deg,#ffd36b,#f0a92e);border-color:transparent;color:#141c33}
+.quiz-again{background:transparent;color:var(--ink)}
+@media (max-width:900px){.level{grid-template-columns:1fr;padding:26px 18px;gap:24px}}
+@media (max-width:520px){.quiz{padding:18px}.quiz-opts{grid-template-columns:1fr}}
+@media (max-width:420px){.theme-btn{width:36px;height:36px}.site-head .wrap{gap:10px}.logo{font-size:1.15rem;gap:6px}.logo svg{width:24px;height:24px}.nav{gap:6px}.country-pick svg{display:none}.country-pick{padding:2px 2px 2px 10px}.country-select{max-width:118px}}
+
+/* social links */
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.social{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);color:var(--ink);text-decoration:none;font-weight:700;font-size:.9rem;transition:transform .2s ease, border-color .2s ease, color .2s ease}
+.social:hover{transform:translateY(-2px)}
+.social.ig:hover{border-color:#d6249f;color:#d6249f}
+.social.fb:hover{border-color:#1877f2;color:#1877f2}
+footer .social{color:var(--ink)}
+.book-social{font-size:.95rem;color:#c3cbe6}
+.book-social a{color:#ffd36b;font-weight:700}
 </style>
 </head>
 <body>
@@ -431,6 +480,10 @@ footer a{color:var(--ink-2)}
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
         <select class="country-select" data-country-select aria-label="Your country"></select>
       </label>
+      <button class="theme-btn" type="button" id="theme-btn" aria-label="Switch light or dark mode">
+        <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
       <a class="btn btn-primary" href="#book">Book a free trial</a>
     </nav>
   </div>
@@ -450,7 +503,7 @@ footer a{color:var(--ink-2)}
         <ul class="subjects" aria-label="Subjects we coach" data-c="subjects"></ul>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#book">Book a free 30-minute trial</a>
-          <a class="btn btn-ghost" href="#exams">See exams in <span data-c="short">USA</span></a>
+          <a class="btn btn-ghost" href="#level">Free 2-minute level check</a>
         </div>
         <div class="hero-stats">
           <div><b data-c="subjectCount">6</b><span>subjects covered</span></div>
@@ -500,6 +553,37 @@ footer a{color:var(--ink-2)}
         <article class="promise reveal"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></span><h3>Six subjects, one place</h3><p>Maths, physics, chemistry, biology, astronomy and computing, from the first round to the national camp.</p></article>
         <article class="promise reveal"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><h3>Planned for your exams</h3><p>We show the contests in <span data-c="short">your country</span> and plan lessons backwards from their real dates.</p></article>
         <article class="promise reveal"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></span><h3>Every lesson recorded</h3><p>Rewatch any lesson for 60 days. Parents can sit in whenever they like.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="level">
+    <div class="wrap">
+      <div class="level reveal">
+        <div class="level-copy">
+          <p class="eyebrow">Free level check</p>
+          <h2>Where does your child stand? Find out in 2 minutes.</h2>
+          <p class="lede">Five questions that get harder as they go. You get an instant level and the plan we would suggest, with no sign-up.</p>
+          <div class="level-subjects" role="group" aria-label="Pick a subject">
+            <button type="button" data-qs="math" aria-pressed="true">Maths</button>
+            <button type="button" data-qs="phys" aria-pressed="false">Physics</button>
+            <button type="button" data-qs="chem" aria-pressed="false">Chemistry</button>
+          </div>
+        </div>
+        <div class="quiz" id="quiz" aria-live="polite">
+          <div class="quiz-top"><span id="quiz-count">Question 1 of 5</span><span class="quiz-bar"><span id="quiz-fill"></span></span></div>
+          <p class="quiz-q" id="quiz-q"></p>
+          <div class="quiz-opts" id="quiz-opts"></div>
+          <div class="quiz-result" id="quiz-result" hidden>
+            <p class="quiz-score" id="quiz-score"></p>
+            <h3 id="quiz-level"></h3>
+            <p id="quiz-advice"></p>
+            <div class="quiz-actions">
+              <a class="btn quiz-book" href="#book" id="quiz-book">Book a free trial with this result</a>
+              <button type="button" class="btn quiz-again" id="quiz-again">Try again</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -677,8 +761,9 @@ footer a{color:var(--ink-2)}
           <h2>Book a trial lesson</h2>
           <p class="lede">Tell us the exam and when you are free. We will reply with two or three slots in your time zone within one working day.</p>
           <ul class="book-points"><li>No card or payment needed</li><li>Honest read on your child's level</li><li>A coach matched to the subject and exam</li></ul>
+          <p class="book-social">Prefer to chat? Message us on <a href="https://www.instagram.com/medalwise.in/" target="_blank" rel="noopener">Instagram</a> or <a href="https://www.facebook.com/share/1HKKoHpMP2/" target="_blank" rel="noopener">Facebook</a>.</p>
         </div>
-        <form id="trial-form" novalidate data-endpoint="https://formsubmit.co/ajax/rishiranjan3799@gmail.com">
+        <form id="trial-form" novalidate data-endpoint="https://formsubmit.co/ajax/medalwise@gmail.com">
           <div class="field"><label for="f-student">Student's first name</label><input id="f-student" name="student" autocomplete="off" required placeholder="Maya"></div>
           <div class="field"><label for="f-email">Parent's email</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="parent@example.com"></div>
           <div class="field"><label for="f-country">Country</label>
@@ -713,7 +798,11 @@ footer a{color:var(--ink-2)}
     <div>
       <a class="logo" href="#top">Medalwise</a>
       <p style="margin-top:10px">Live one-to-one coaching for Olympiads and competitive exams: maths, physics, chemistry, biology, astronomy, computing, JEE and NEET.</p>
-      <p style="margin-top:10px"><a href="mailto:hello@medalwise.com">hello@medalwise.com</a></p>
+      <p style="margin-top:10px"><a href="mailto:medalwise@gmail.com">medalwise@gmail.com</a></p>
+      <div class="socials" aria-label="Medalwise on social media">
+        <a class="social ig" href="https://www.instagram.com/medalwise.in/" target="_blank" rel="noopener" aria-label="Medalwise on Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
+        <a class="social fb" href="https://www.facebook.com/share/1HKKoHpMP2/" target="_blank" rel="noopener" aria-label="Medalwise on Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.5-1 .9-1H17V2.2L14.1 2C11 2 10.3 4.3 10.3 5.9v2.6H8V12h2.3v10H14V12h2.7l.4-3.5z"/></svg><span>Facebook</span></a>
+      </div>
     </div>
     <div>
       <h3>Coaching</h3>
@@ -977,6 +1066,78 @@ footer a{color:var(--ink-2)}
 
   setCountry(cc,false);
 
+  // ---- Theme toggle (remembered per browser) ----
+  var root=document.documentElement;
+  try{ var th=localStorage.getItem("mw-theme"); if(th) root.setAttribute("data-theme",th); }catch(e){}
+  document.getElementById("theme-btn").addEventListener("click",function(){
+    var dark=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches);
+    root.setAttribute("data-theme",dark?"light":"dark");
+    try{ localStorage.setItem("mw-theme",dark?"light":"dark"); }catch(e){}
+  });
+
+  // ---- Free level check ----
+  var QZ={
+    math:{name:"Maths",q:[
+      ["What is 15% of 80?",["10","12","14","16"],1],
+      ["What is the sum of the interior angles of a hexagon?",["540°","720°","900°","1080°"],1],
+      ["How many positive divisors does 36 have?",["6","8","9","12"],2],
+      ["In how many distinct ways can the letters of LEVEL be arranged?",["20","30","60","120"],1],
+      ["What is the remainder when 2¹⁰⁰ is divided by 7?",["1","2","4","6"],1]]},
+    phys:{name:"Physics",q:[
+      ["A car covers 120 km in 2 hours. What is its average speed?",["40 km/h","60 km/h","80 km/h","240 km/h"],1],
+      ["What is the SI unit of force?",["Joule","Watt","Newton","Pascal"],2],
+      ["A stone is dropped from rest (g = 10 m/s²). How far does it fall in the first 3 s?",["30 m","45 m","60 m","90 m"],1],
+      ["Two 6 Ω resistors are connected in parallel. What is the combined resistance?",["12 Ω","6 Ω","3 Ω","1.5 Ω"],2],
+      ["A ball is launched at 20 m/s at 45° on level ground (g = 10 m/s²). What is its range?",["10 m","20 m","40 m","80 m"],2]]},
+    chem:{name:"Chemistry",q:[
+      ["What is the atomic number of carbon?",["4","6","12","14"],1],
+      ["What is the pH of pure water at 25 °C?",["0","1","7","14"],2],
+      ["How many moles are in 36 g of water (H₂O)?",["0.5","1","2","3"],2],
+      ["What is the hybridisation of carbon in methane (CH₄)?",["sp","sp²","sp³","sp³d"],2],
+      ["How many unpaired electrons does a ground-state oxygen atom have?",["0","1","2","4"],2]]}
+  };
+  var qs="math", qi=0, qScore=0;
+  var qEl=document.getElementById("quiz-q"), oEl=document.getElementById("quiz-opts"), rEl=document.getElementById("quiz-result");
+  function quizShow(){
+    var set=QZ[qs].q;
+    document.getElementById("quiz-fill").style.width=(qi/set.length*100)+"%";
+    if(qi>=set.length){ return quizDone(); }
+    document.getElementById("quiz-count").textContent="Question "+(qi+1)+" of "+set.length;
+    qEl.hidden=false; oEl.hidden=false; rEl.hidden=true;
+    var item=set[qi]; qEl.textContent=item[0]; oEl.innerHTML="";
+    item[1].forEach(function(opt,i){
+      var b=document.createElement("button"); b.type="button"; b.textContent=opt;
+      b.addEventListener("click",function(){
+        oEl.querySelectorAll("button").forEach(function(x,j){ x.disabled=true; if(j===item[2]) x.classList.add("right"); });
+        if(i===item[2]) qScore++; else b.classList.add("wrong");
+        setTimeout(function(){ qi++; quizShow(); },700);
+      });
+      oEl.appendChild(b);
+    });
+  }
+  var quizPlan="Not sure yet";
+  function quizDone(){
+    document.getElementById("quiz-count").textContent="Your result";
+    qEl.hidden=true; oEl.hidden=true; rEl.hidden=false;
+    var lv=qScore<=2?["Foundation","A great place to start. A coach will build the core ideas first, then move to contest problems."]
+          :qScore<=4?["Contender","Strong basics. The next step is speed and harder problems for the second round."]
+          :["Elite","Excellent. Your child is ready for national-level problems and long-answer training."];
+    quizPlan=lv[0];
+    document.getElementById("quiz-score").textContent=qScore+" / 5";
+    document.getElementById("quiz-level").textContent="Suggested plan: "+lv[0];
+    document.getElementById("quiz-advice").textContent=lv[1]+" The free trial gives a fuller picture.";
+  }
+  function quizReset(){ qi=0; qScore=0; quizShow(); }
+  document.querySelectorAll("[data-qs]").forEach(function(b){ b.addEventListener("click",function(){
+    qs=b.dataset.qs; document.querySelectorAll("[data-qs]").forEach(function(x){ x.setAttribute("aria-pressed",x===b); }); quizReset();
+  }); });
+  document.getElementById("quiz-again").addEventListener("click",quizReset);
+  document.getElementById("quiz-book").addEventListener("click",function(){
+    var ps=document.getElementById("f-plan"); if(ps) ps.value=quizPlan;
+    var n=document.getElementById("f-notes"); if(n&&!n.value) n.value="Level check: "+QZ[qs].name+" "+qScore+"/5.";
+  });
+  quizShow();
+
   // ---- Scroll reveal and mobile CTA ----
   document.documentElement.classList.add("js");
   var items=document.querySelectorAll(".reveal");
@@ -1032,7 +1193,7 @@ footer a{color:var(--ink-2)}
     if(!endpoint){ showDone(false); return; }
     fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(payload)})
       .then(function(r){ if(!r.ok) throw new Error(); showDone(true); })
-      .catch(function(){ err.textContent="We could not send your request. Please email hello@medalwise.com instead."; err.hidden=false; });
+      .catch(function(){ err.textContent="We could not send your request. Please email medalwise@gmail.com instead."; err.hidden=false; });
   });
 })();
 </script>
