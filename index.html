@@ -1180,8 +1180,8 @@ footer .social{color:var(--ink)}
   function quizDone(){
     document.getElementById("quiz-count").textContent="Your result";
     qEl.hidden=true; oEl.hidden=true; rEl.hidden=false;
-    var lv=qScore<=2?["Foundation","A great place to start. A coach will build the core ideas first, then move to contest problems."]
-          :qScore<=4?["Contender","Strong basics. The next step is speed and harder problems for the second round."]
+    var lv=qScore<=1?["Foundation","A great place to start. A coach will build the core ideas first, then move to contest problems."]
+          :qScore<=3?["Contender","Strong basics. The next step is speed and harder problems for the second round."]
           :["Elite","Excellent. Your child is ready for national-level problems and long-answer training."];
     quizPlan=lv[0];
     document.getElementById("quiz-score").textContent=qScore+" / 5";
