@@ -1077,30 +1077,90 @@ footer .social{color:var(--ink)}
   });
 
   // ---- Free level check ----
+  // Each subject has five levels that get harder; every run picks one question per level.
   var QZ={
-    math:{name:"Maths",q:[
-      ["What is 15% of 80?",["10","12","14","16"],1],
-      ["What is the sum of the interior angles of a hexagon?",["540°","720°","900°","1080°"],1],
-      ["How many positive divisors does 36 have?",["6","8","9","12"],2],
-      ["In how many distinct ways can the letters of LEVEL be arranged?",["20","30","60","120"],1],
-      ["What is the remainder when 2¹⁰⁰ is divided by 7?",["1","2","4","6"],1]]},
-    phys:{name:"Physics",q:[
-      ["A car covers 120 km in 2 hours. What is its average speed?",["40 km/h","60 km/h","80 km/h","240 km/h"],1],
-      ["What is the SI unit of force?",["Joule","Watt","Newton","Pascal"],2],
-      ["A stone is dropped from rest (g = 10 m/s²). How far does it fall in the first 3 s?",["30 m","45 m","60 m","90 m"],1],
-      ["Two 6 Ω resistors are connected in parallel. What is the combined resistance?",["12 Ω","6 Ω","3 Ω","1.5 Ω"],2],
-      ["A ball is launched at 20 m/s at 45° on level ground (g = 10 m/s²). What is its range?",["10 m","20 m","40 m","80 m"],2]]},
-    chem:{name:"Chemistry",q:[
-      ["What is the atomic number of carbon?",["4","6","12","14"],1],
-      ["What is the pH of pure water at 25 °C?",["0","1","7","14"],2],
-      ["How many moles are in 36 g of water (H₂O)?",["0.5","1","2","3"],2],
-      ["What is the hybridisation of carbon in methane (CH₄)?",["sp","sp²","sp³","sp³d"],2],
-      ["How many unpaired electrons does a ground-state oxygen atom have?",["0","1","2","4"],2]]}
+    math:{name:"Maths",lv:[
+      [["What is 15% of 80?",["10","12","14","16"],1],
+       ["What is 3/4 of 48?",["32","36","38","42"],1],
+       ["What is the smallest prime number?",["0","1","2","3"],2],
+       ["What is 7 × 8 − 6?",["48","50","56","62"],1]],
+      [["What is the sum of the interior angles of a hexagon?",["540°","720°","900°","1080°"],1],
+       ["What is the least common multiple of 12 and 18?",["24","36","54","72"],1],
+       ["If 3x + 5 = 20, what is x?",["3","5","7","15"],1],
+       ["What is the area of a right triangle with legs 6 and 8?",["14","24","28","48"],1]],
+      [["How many positive divisors does 36 have?",["6","8","9","12"],2],
+       ["What is the sum of the first 20 positive integers?",["190","200","210","220"],2],
+       ["How many two-digit numbers are divisible by 7?",["12","13","14","15"],1],
+       ["The average of 5 numbers is 12. One is removed and the average of the rest is 10. Which number was removed?",["2","10","20","22"],2]],
+      [["In how many distinct ways can the letters of LEVEL be arranged?",["20","30","60","120"],1],
+       ["How many diagonals does a decagon (10 sides) have?",["35","40","45","70"],0],
+       ["In how many ways can 3 people be chosen from 7?",["21","35","42","210"],1],
+       ["What is the last digit of 3²⁰²⁶?",["1","3","7","9"],3]],
+      [["What is the remainder when 2¹⁰⁰ is divided by 7?",["1","2","4","6"],1],
+       ["How many zeros does 100! end with?",["20","24","25","30"],1],
+       ["If x + 1/x = 3, what is x² + 1/x²?",["5","7","9","11"],1],
+       ["How many positive integers below 100 share no common factor with 100 (other than 1)?",["40","50","60","64"],0]]]},
+    phys:{name:"Physics",lv:[
+      [["A car covers 120 km in 2 hours. What is its average speed?",["40 km/h","60 km/h","80 km/h","240 km/h"],1],
+       ["What is the SI unit of force?",["Joule","Watt","Newton","Pascal"],2],
+       ["Which colour of visible light has the longest wavelength?",["Violet","Blue","Green","Red"],3],
+       ["Sound cannot travel through which of these?",["Water","Steel","Air","A vacuum"],3]],
+      [["A 2 kg object accelerates at 3 m/s². What net force acts on it?",["1.5 N","5 N","6 N","9 N"],2],
+       ["What is the weight of a 5 kg mass on Earth (g = 10 m/s²)?",["0.5 N","5 N","50 N","500 N"],2],
+       ["A 2 kg ball moves at 3 m/s. What is its kinetic energy?",["3 J","6 J","9 J","18 J"],2],
+       ["A wave has frequency 50 Hz and wavelength 2 m. What is its speed?",["25 m/s","52 m/s","100 m/s","200 m/s"],2]],
+      [["A stone is dropped from rest (g = 10 m/s²). How far does it fall in the first 3 s?",["30 m","45 m","60 m","90 m"],1],
+       ["Two 6 Ω resistors are connected in parallel. What is the combined resistance?",["12 Ω","6 Ω","3 Ω","1.5 Ω"],2],
+       ["A 60 W bulb runs for 5 hours. How much energy does it use?",["0.3 kWh","3 kWh","12 kWh","300 kWh"],0],
+       ["A 12 V battery drives 2 A through a resistor. What is its resistance?",["6 Ω","10 Ω","14 Ω","24 Ω"],0]],
+      [["A ball is launched at 20 m/s at 45° on level ground (g = 10 m/s²). What is its range?",["10 m","20 m","40 m","80 m"],2],
+       ["A ball is thrown straight up at 20 m/s (g = 10 m/s²). What maximum height does it reach?",["10 m","20 m","40 m","80 m"],1],
+       ["A 1000 kg car slows from 20 m/s to rest in 4 s. What is the average braking force?",["2000 N","5000 N","10 000 N","80 000 N"],1],
+       ["A spring with k = 200 N/m is stretched by 0.1 m. How much energy does it store?",["1 J","2 J","10 J","20 J"],0]],
+      [["A satellite is at a distance of 4R from Earth's centre (R = Earth's radius). How does g there compare with g at the surface?",["1/2","1/4","1/8","1/16"],3],
+       ["A pendulum is made 4 times longer. What happens to its period?",["It halves","No change","It doubles","It becomes 4 times"],2],
+       ["Masses of 2 kg and 3 kg hang over a light frictionless pulley (g = 10 m/s²). What is their acceleration?",["1 m/s²","2 m/s²","5 m/s²","10 m/s²"],1],
+       ["A 2 kg block moving at 6 m/s hits a 1 kg block at rest and they stick. What is their common speed?",["2 m/s","3 m/s","4 m/s","6 m/s"],2]]]},
+    chem:{name:"Chemistry",lv:[
+      [["What is the atomic number of carbon?",["4","6","12","14"],1],
+       ["What is the chemical formula of table salt?",["NaCl","KCl","NaOH","CaCO₃"],0],
+       ["Which gas do plants take in for photosynthesis?",["O₂","N₂","CO₂","H₂"],2],
+       ["Which of these is a noble gas?",["Oxygen","Nitrogen","Argon","Chlorine"],2]],
+      [["What is the pH of pure water at 25 °C?",["0","1","7","14"],2],
+       ["How many atoms are in one molecule of glucose (C₆H₁₂O₆)?",["12","18","24","36"],2],
+       ["What is the valency of oxygen in water (H₂O)?",["1","2","3","4"],1],
+       ["Which particle carries a negative charge?",["Proton","Neutron","Electron","Nucleus"],2]],
+      [["How many moles are in 36 g of water (H₂O)?",["0.5","1","2","3"],2],
+       ["What is the molar mass of CO₂ (C = 12, O = 16)?",["28 g/mol","32 g/mol","44 g/mol","48 g/mol"],2],
+       ["At most how many electrons can the second shell (n = 2) hold?",["2","6","8","18"],2],
+       ["What volume does 1 mole of an ideal gas occupy at 0 °C and 1 atm?",["1 L","11.2 L","22.4 L","24.8 L"],2]],
+      [["What is the hybridisation of carbon in methane (CH₄)?",["sp","sp²","sp³","sp³d"],2],
+       ["What is the shape of a water molecule?",["Linear","Bent","Trigonal planar","Tetrahedral"],1],
+       ["What is the pH of a 0.01 M HCl solution?",["1","2","7","12"],1],
+       ["What is the oxidation state of Mn in KMnO₄?",["+2","+4","+6","+7"],3]],
+      [["How many unpaired electrons does a ground-state oxygen atom have?",["0","1","2","4"],2],
+       ["How many structural isomers does C₅H₁₂ have?",["2","3","4","5"],1],
+       ["What is the bond order of O₂?",["1","1.5","2","2.5"],2],
+       ["A first-order reaction has a half-life of 10 minutes. What fraction is left after 30 minutes?",["1/3","1/4","1/6","1/8"],3]]]}
   };
-  var qs="math", qi=0, qScore=0;
+  // Pick one question per level, avoiding the ones shown last time (kept across refreshes), and shuffle the options.
+  function quizPick(key){
+    var last={}; try{ last=JSON.parse(localStorage.getItem("mw-qz")||"{}"); }catch(e){}
+    var prev=last[key]||[], picks=[];
+    var set=QZ[key].lv.map(function(pool,l){
+      var idx=pool.map(function(_,i){return i;}).filter(function(i){return i!==prev[l];});
+      var k=idx[Math.floor(Math.random()*idx.length)]; picks.push(k);
+      var q=pool[k], order=q[1].map(function(_,i){return i;});
+      for(var i=order.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)), t=order[i]; order[i]=order[j]; order[j]=t; }
+      return [q[0], order.map(function(i){return q[1][i];}), order.indexOf(q[2])];
+    });
+    last[key]=picks; try{ localStorage.setItem("mw-qz",JSON.stringify(last)); }catch(e){}
+    return set;
+  }
+  var qs="math", qi=0, qScore=0, qSet=quizPick("math");
   var qEl=document.getElementById("quiz-q"), oEl=document.getElementById("quiz-opts"), rEl=document.getElementById("quiz-result");
   function quizShow(){
-    var set=QZ[qs].q;
+    var set=qSet;
     document.getElementById("quiz-fill").style.width=(qi/set.length*100)+"%";
     if(qi>=set.length){ return quizDone(); }
     document.getElementById("quiz-count").textContent="Question "+(qi+1)+" of "+set.length;
@@ -1128,7 +1188,7 @@ footer .social{color:var(--ink)}
     document.getElementById("quiz-level").textContent="Suggested plan: "+lv[0];
     document.getElementById("quiz-advice").textContent=lv[1]+" The free trial gives a fuller picture.";
   }
-  function quizReset(){ qi=0; qScore=0; quizShow(); }
+  function quizReset(){ qi=0; qScore=0; qSet=quizPick(qs); quizShow(); }
   document.querySelectorAll("[data-qs]").forEach(function(b){ b.addEventListener("click",function(){
     qs=b.dataset.qs; document.querySelectorAll("[data-qs]").forEach(function(x){ x.setAttribute("aria-pressed",x===b); }); quizReset();
   }); });
