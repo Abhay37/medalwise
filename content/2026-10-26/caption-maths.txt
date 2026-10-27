@@ -1,0 +1,12 @@
+Stars and bars won't save you here. 🔺
+
+How many non-congruent triangles with integer sides have perimeter 2026? One clever substitution turns geometry into counting.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: 17 ordered pairs.
+2026(x + y) = xy → (x − 2026)(y − 2026) = 2026² = 2²·1013², which has 9 positive divisors. 9 positive + 9 negative pairs, minus the one that gives x = y = 0: 9 + 9 − 1 = 17.
+
+🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#IOQM #RMO #MathOlympiad #AIME #AMC12 #Combinatorics #Geometry #MathPuzzle #GiftedKids #Medalwise

@@ -1,0 +1,12 @@
+The gauge reads 500 mmHg at 30 minutes. What will it read at 45? ⏱️
+
+A(g) → 2B(g) + C(g), first order, starting from pure A at 200 mmHg in a rigid flask. Hint: the pressure does NOT rise in a straight line. Real NSEC-level kinetics.
+
+Comment your answer 👇 Full solution tomorrow.
+
+✅ Last answer: A, [Co(NH₃)₅Cl]Cl₂.
+ΔTf = i·Kf·m → 0.0558 = i × 1.86 × 0.01 → i = 3. Three ions means two Cl⁻ outside the sphere and one Cl bonded to Co: [Co(NH₃)₅Cl]²⁺ + 2Cl⁻.
+
+🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#ChemistryOlympiad #NSEC #USNCO #ChemicalKinetics #HalfLife #FirstOrderReaction #ChemistryPuzzle #JEEChemistry #STEMKids #Medalwise

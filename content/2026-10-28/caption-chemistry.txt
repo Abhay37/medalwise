@@ -1,0 +1,12 @@
+Two iron half-cells, one simple question… and most students just add the voltages. ⚡
+
+E°(Fe³⁺/Fe²⁺) = +0.77 V, E°(Fe²⁺/Fe) = −0.44 V. What is E°(Fe³⁺/Fe)? NSEC-level electrochemistry.
+
+Comment your answer 👇 Full solution tomorrow.
+
+✅ Last answer: A, 550 mmHg.
+Total = 200 + 2x. At 30 min, 500 → x = 150, so A fell to 50 = 200/4: two half-lives, t½ = 15 min. 45 min = 3 half-lives → A = 25, x = 175 → total = 550 mmHg.
+
+🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#ChemistryOlympiad #NSEC #USNCO #Electrochemistry #ElectrodePotential #GibbsEnergy #ChemistryPuzzle #JEEChemistry #STEMKids #Medalwise

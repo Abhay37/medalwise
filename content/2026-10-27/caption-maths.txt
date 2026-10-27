@@ -1,0 +1,12 @@
+Looks like a simple quadratic. It isn't. 😏
+
+x² − 5⌊x⌋ + 4 = 0. Find the sum of the squares of ALL real solutions. If you only found x = 1 and 4, look again. IOQM / RMO-level algebra.
+
+How many solutions did you find? Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: 85514 triangles.
+Ravi substitution: a = y+z, b = z+x, c = x+y turns perimeter 2026 into x+y+z = 1013 with positive integers. Counting up to order gives the nearest integer to 1013²/12 = 85514.
+
+🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#MathOlympiad #IOQM #RMO #AMC10 #AIME #FloorFunction #Algebra #MathPuzzle #JEEMaths #Medalwise
