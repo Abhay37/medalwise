@@ -1,0 +1,12 @@
+450+ digit numbers, and the answer fits on your fingers. ✋
+
+Find gcd(2²⁰²⁶ − 1, 2¹⁵¹⁸ − 1). No calculator. One beautiful identity does all the work. IOQM / RMO-level number theory.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: 34.
+Let n = ⌊x⌋, so x = √(5n − 4) with n ≤ x < n + 1 → 1 ≤ n ≤ 4. Roots: 1, √6, √11, 4. Sum of squares = 1 + 6 + 11 + 16 = 34. (Treating ⌊x⌋ as x misses √6 and √11!)
+
+🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#MathOlympiad #IOQM #RMO #AMC12 #AIME #NumberTheory #GCD #MathPuzzle #GiftedKids #Medalwise
