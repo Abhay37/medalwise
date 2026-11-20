@@ -1,0 +1,57 @@
+{
+ "note": "Post after the 2026-11-01 batch (captions carry its answers). Fill time with the next free slots in this order; slot_ist/region are the intended rotation.",
+ "posts": [
+  {
+   "id": "2026-11-21-biology",
+   "time": null,
+   "slot_ist": "09:30",
+   "region": "US West",
+   "type": "reel",
+   "media": "autopost/media/2026-11-21/reel-biology.mp4",
+   "caption": "20 bases of DNA. One ribosome. How many amino acids come out? 🧬\n\nTemplate strand: 3′-CGTACTTTGGGACTACCATT-5′. Transcribe first, then find where the ribosome really starts. NSEB-level molecular biology.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: B, 225 frogs.\nOnly tagged frogs can be recognised: 60 × ¾ = 45 still tagged. N = M × C / R = 45 × 50 / 10 = 225. Ignoring the lost tags gives 300, an over-estimate.\n\n🏅 Medalwise: 1-on-1 Biology Olympiad and NEET mentoring (NSEB, USABO, INBO). Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#BiologyOlympiad #NSEB #USABO #MolecularBiology #Transcription #Translation #GeneticCode #NEET #BiologyPuzzle #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-21-maths",
+   "time": null,
+   "slot_ist": "14:30",
+   "region": "Australia",
+   "type": "reel",
+   "media": "autopost/media/2026-11-21/reel-maths.mp4",
+   "caption": "You know trailing zeros in base 10. Base 12 has a twist. 🔄\n\nWhen 2026! is written in base 12, how many zeros does it end with? Which prime runs out first, 2 or 3? IOQM / RMO-level number theory.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: B, −x − 1.\nPut x = ω (ω² + ω + 1 = 0, ω³ = 1). ω + 1 = −ω², so (ω + 1)²⁰²⁶ = ω⁴⁰⁵² = ω² = −ω − 1. The remainder ax + b must match: a = −1, b = −1.\n\n🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#MathOlympiad #IOQM #RMO #AMC12 #AIME #NumberTheory #Factorials #MathPuzzle #GiftedKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-21-physics",
+   "time": null,
+   "slot_ist": "20:00",
+   "region": "India",
+   "type": "reel",
+   "media": "autopost/media/2026-11-21/reel-physics.mp4",
+   "caption": "Push a satellite from 2R to 3R. How much energy does it really take? 🛰️🌍\n\nMass m, circular orbits, R = Earth's radius, g at the surface. Minimum energy to shift orbits? Cheaper than you think! NSEP-level gravitation.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: B, 0.30 m.\nAt maximum compression both blocks move together: 2 × 6 = 4v → v = 3 m/s. KE falls from 36 J to 18 J, so the spring stores 18 J = ½ × 400 × x² → x = 0.30 m.\n\n🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#PhysicsOlympiad #NSEP #USAPhO #FmaExam #Gravitation #SatelliteMotion #OrbitalEnergy #PhysicsPuzzle #JEEAdvanced #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-21-chemistry",
+   "time": null,
+   "slot_ist": "06:30",
+   "region": "US East",
+   "type": "reel",
+   "media": "autopost/media/2026-11-21/reel-chemistry.mp4",
+   "caption": "Two silver salts, one beaker of water and one of AgNO₃, and the winner flips. 🔄\n\nKsp(AgCl) = 1.8 × 10⁻¹⁰, Ksp(Ag₂CrO₄) = 1.1 × 10⁻¹². Which is more soluble in pure water, and in 0.01 M AgNO₃? NSEC-level ionic equilibrium.\n\nComment your answer 👇 Full solution tomorrow.\n\n✅ Last answer: D, 0.67.\nVapour density of PCl₅ = 208.5/2 = 104.25. Moles become 1 + α, so D/d = 1 + α → α = (104.25 − 62.55)/62.55 = 2/3 ≈ 0.67.\n\n🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#ChemistryOlympiad #NSEC #USNCO #IonicEquilibrium #SolubilityProduct #CommonIonEffect #ChemistryPuzzle #JEEChemistry #STEMKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  }
+ ]
+}
