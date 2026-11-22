@@ -150,13 +150,17 @@ class YouTube:
         try:
             return urllib.request.urlopen(req, timeout=300)
         except urllib.error.HTTPError as e:
+            raw = e.read().decode("utf-8", "replace")
             try:
-                body = json.load(e)
+                body = json.loads(raw)
                 err = body.get("error")
-                msg = err.get("message") if isinstance(err, dict) else (body.get("error_description") or err)
+                if isinstance(err, dict):
+                    msg = err.get("message") or str(err)
+                else:
+                    msg = "%s: %s" % (err, body.get("error_description", ""))
             except Exception:
-                msg = str(e)
-            raise GraphError("YouTube: " + str(msg)) from None
+                msg = raw[:300] or str(e)
+            raise GraphError("YouTube (HTTP %s, %s): %s" % (e.code, req.full_url.split("?")[0], msg)) from None
 
     def token(self):
         if self.access is None:
@@ -249,8 +253,17 @@ def check(g, cfg):
         print("Could not read the publishing limit:", e)
     yt = YouTube()
     if yt.ready():
-        title, cid = yt.channel()
-        print("YouTube channel:", title, cid)
+        try:
+            yt.token()
+            print("YouTube: sign-in works (refresh token accepted).")
+        except GraphError as e:
+            print("YouTube problem:", e)
+            raise
+        try:
+            title, cid = yt.channel()
+            print("YouTube channel:", title, cid)
+        except GraphError as e:
+            print("YouTube channel name not readable with the upload-only scope (fine):", e)
     else:
         print("YouTube: not set up (add YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN secrets).")
 
