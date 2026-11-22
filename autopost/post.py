@@ -66,6 +66,20 @@ class Graph:
             raise GraphError(msg) from None
 
 
+def use_page_token(g, cfg):
+    """Accept either a Page token or a long-lived user token in META_PAGE_TOKEN.
+
+    With a user token, ask Meta for the Page's own token and use that instead.
+    The token is never printed.
+    """
+    try:
+        page_token = g.call("GET", cfg["facebook_page_id"], fields="access_token").get("access_token")
+    except GraphError:
+        return
+    if page_token:
+        g.token = page_token
+
+
 def media_url(cfg, media):
     """A full URL is used as is; a repo path is served from GitHub Pages."""
     if media.startswith("http://") or media.startswith("https://"):
@@ -200,6 +214,7 @@ def main():
         return
     g = Graph(token, cfg.get("graph_version", "v23.0"))
     try:
+        use_page_token(g, cfg)
         if mode == "check":
             check(g, cfg)
         else:
