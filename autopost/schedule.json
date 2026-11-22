@@ -307,6 +307,50 @@
         "instagram",
         "facebook"
       ]
+    },
+    {
+      "id": "2026-11-23-physics",
+      "time": "2026-11-29T09:30:00+05:30",
+      "type": "reel",
+      "media": "autopost/media/2026-11-23/reel-physics.mp4",
+      "caption": "Push only the top block. How hard before the two stop moving together? 🧱➡️\n\n2 kg on top of 4 kg, smooth floor, μ = 0.3 between the blocks, F on the TOP block. Largest F with no slipping? NSEP-level friction.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: C, 6 N.\nIn the lift's frame g_eff = 10 + 5 = 15 m/s². Buoyancy = 1000 × 10⁻³ × 15 = 15 N, weight = 600 × 10⁻³ × 15 = 9 N, so T = 15 − 9 = 6 N. The upward acceleration makes buoyancy AND weight grow together.\n\n🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#PhysicsOlympiad #NSEP #USAPhO #FmaExam #Friction #LawsOfMotion #NewtonsLaws #PhysicsPuzzle #JEEAdvanced #Medalwise",
+      "networks": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-11-23-chemistry",
+      "time": "2026-11-29T14:30:00+05:30",
+      "type": "reel",
+      "media": "autopost/media/2026-11-23/reel-chemistry.mp4",
+      "caption": "Acetic acid, then NaOH, then a splash of HCl. Where does the pH land? 🧪\n\n50 mL 0.2 M CH₃COOH + 50 mL 0.1 M NaOH, then 10 mL 0.05 M HCl. pKa = 4.74. Three steps, a trap in each. NSEC-level buffers.\n\nComment your answer 👇 Full solution tomorrow.\n\n✅ Last answer: B, 4.57 kJ.\nH₂SO₄ gives 0.10 mol H⁺ but NaOH gives only 0.08 mol OH⁻, so OH⁻ is limiting and just 0.08 mol of water forms. Heat = 0.08 × 57.1 = 4.57 kJ.\n\n🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#ChemistryOlympiad #NSEC #USNCO #BufferSolution #HendersonHasselbalch #IonicEquilibrium #ChemistryPuzzle #JEEChemistry #STEMKids #Medalwise",
+      "networks": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-11-23-biology",
+      "time": "2026-11-29T20:00:00+05:30",
+      "type": "reel",
+      "media": "autopost/media/2026-11-23/reel-biology.mp4",
+      "caption": "Your body burns 250 mL of oxygen a minute and your heart beats 80 times. ❤️\n\nArterial blood 200 mL O₂/L, venous 150 mL O₂/L. How much blood does ONE beat push out? NSEB-level physiology.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: B, RQ 0.7, fats.\nKOH flask: fall = O₂ used = 10 mL. Water flask: O₂ − CO₂ = 3, so CO₂ = 7 mL. RQ = 7/10 = 0.7, the value for fats, so these are oily seeds.\n\n🏅 Medalwise: 1-on-1 Biology Olympiad and NEET mentoring (NSEB, USABO, INBO). Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#BiologyOlympiad #NSEB #USABO #HumanPhysiology #CardiacOutput #FickPrinciple #NEET #BiologyPuzzle #STEMKids #Medalwise",
+      "networks": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-11-23-maths",
+      "time": "2026-11-30T06:30:00+05:30",
+      "type": "reel",
+      "media": "autopost/media/2026-11-23/reel-maths.mp4",
+      "caption": "HH and HT each have a 1/4 chance... so you wait equally long for both, right? 🪙\n\nA fair coin is tossed until two Heads in a row appear. Average number of tosses? (Bonus: what about HT?) AIME / IOQM-level probability.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: −15.\nEach root obeys r³ = 3r − 1, so S_k = 3S_(k−2) − S_(k−3). With S₀ = 3, S₁ = 0, S₂ = 6: S₃ = −3, S₄ = 18, S₅ = 3(−3) − 6 = −15. No need to find the roots!\n\n🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#MathOlympiad #AIME #IOQM #AMC12 #Probability #ExpectedValue #MarkovChains #MathPuzzle #GiftedKids #Medalwise",
+      "networks": [
+        "instagram",
+        "facebook"
+      ]
     }
   ]
 }

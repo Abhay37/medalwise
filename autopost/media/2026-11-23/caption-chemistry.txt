@@ -1,0 +1,12 @@
+Acetic acid, then NaOH, then a splash of HCl. Where does the pH land? 🧪
+
+50 mL 0.2 M CH₃COOH + 50 mL 0.1 M NaOH, then 10 mL 0.05 M HCl. pKa = 4.74. Three steps, a trap in each. NSEC-level buffers.
+
+Comment your answer 👇 Full solution tomorrow.
+
+✅ Last answer: B, 4.57 kJ.
+H₂SO₄ gives 0.10 mol H⁺ but NaOH gives only 0.08 mol OH⁻, so OH⁻ is limiting and just 0.08 mol of water forms. Heat = 0.08 × 57.1 = 4.57 kJ.
+
+🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#ChemistryOlympiad #NSEC #USNCO #BufferSolution #HendersonHasselbalch #IonicEquilibrium #ChemistryPuzzle #JEEChemistry #STEMKids #Medalwise

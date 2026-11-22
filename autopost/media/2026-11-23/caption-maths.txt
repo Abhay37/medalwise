@@ -1,0 +1,12 @@
+HH and HT each have a 1/4 chance... so you wait equally long for both, right? 🪙
+
+A fair coin is tossed until two Heads in a row appear. Average number of tosses? (Bonus: what about HT?) AIME / IOQM-level probability.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: −15.
+Each root obeys r³ = 3r − 1, so S_k = 3S_(k−2) − S_(k−3). With S₀ = 3, S₁ = 0, S₂ = 6: S₃ = −3, S₄ = 18, S₅ = 3(−3) − 6 = −15. No need to find the roots!
+
+🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#MathOlympiad #AIME #IOQM #AMC12 #Probability #ExpectedValue #MarkovChains #MathPuzzle #GiftedKids #Medalwise
