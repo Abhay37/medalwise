@@ -58,6 +58,10 @@ A free GitHub Actions job (`.github/workflows/autopost.yml`) runs every 15 minut
 
 Instagram's API allows 100 published posts per 24 hours. Reels need 9:16 mp4 (H.264, AAC), 3 to 90 seconds. Music must already be in the video, because library songs cannot be attached through the API.
 
+## YouTube Shorts (optional)
+
+Add `"youtube"` to a post's `networks` to upload the mp4 as a Short (title = first caption line + `#Shorts`, description = caption, category Education, not made for kids). Needs three Actions secrets from an OAuth client with scope `https://www.googleapis.com/auth/youtube.upload`: `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`. Keep the OAuth consent screen "In production", or the refresh token dies after 7 days. Uploads stay private until the Cloud project passes YouTube's API audit. Without the secrets, YouTube entries wait (and are skipped after 6 hours) while Instagram and Facebook post normally. Optional `yt_title` overrides the title.
+
 ## Manual runs
 
 Actions → Social autopost → Run workflow, with mode `check` (test the token), `dry` (list what would post) or `run` (post now).

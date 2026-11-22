@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Publish due posts from autopost/schedule.json to Instagram and Facebook.
 
-Uses the Meta Graph API with one Page access token (env META_PAGE_TOKEN).
+Uses the Meta Graph API with one Page access token (env META_PAGE_TOKEN), and
+optionally the YouTube Data API v3 for Shorts (env YT_CLIENT_ID, YT_CLIENT_SECRET,
+YT_REFRESH_TOKEN; posts list "youtube" in networks).
 Run by .github/workflows/autopost.yml every 15 minutes. Standard library only.
 
   python3 autopost/post.py check      # verify the token, Page and Instagram link
@@ -132,6 +134,101 @@ def publish_facebook(g, page_id, post, url):
     return "https://www.facebook.com/" + res.get("post_id", res.get("id", ""))
 
 
+class YouTube:
+    """Uploads Shorts with the YouTube Data API v3 (env YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN)."""
+
+    def __init__(self):
+        self.client_id = os.environ.get("YT_CLIENT_ID", "").strip()
+        self.client_secret = os.environ.get("YT_CLIENT_SECRET", "").strip()
+        self.refresh_token = os.environ.get("YT_REFRESH_TOKEN", "").strip()
+        self.access = None
+
+    def ready(self):
+        return bool(self.client_id and self.client_secret and self.refresh_token)
+
+    def _request(self, req):
+        try:
+            return urllib.request.urlopen(req, timeout=300)
+        except urllib.error.HTTPError as e:
+            try:
+                body = json.load(e)
+                err = body.get("error")
+                msg = err.get("message") if isinstance(err, dict) else (body.get("error_description") or err)
+            except Exception:
+                msg = str(e)
+            raise GraphError("YouTube: " + str(msg)) from None
+
+    def token(self):
+        if self.access is None:
+            data = urllib.parse.urlencode({
+                "client_id": self.client_id, "client_secret": self.client_secret,
+                "refresh_token": self.refresh_token, "grant_type": "refresh_token",
+            }).encode()
+            with self._request(urllib.request.Request("https://oauth2.googleapis.com/token", data=data)) as r:
+                self.access = json.load(r)["access_token"]
+        return self.access
+
+    def channel(self):
+        req = urllib.request.Request(
+            "https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true",
+            headers={"Authorization": "Bearer " + self.token()})
+        with self._request(req) as r:
+            items = json.load(r).get("items", [])
+        if not items:
+            raise GraphError("YouTube: this Google account has no channel.")
+        return items[0]["snippet"].get("title", ""), items[0]["id"]
+
+    def upload(self, video, title, description):
+        meta = json.dumps({
+            "snippet": {"title": title, "description": description, "categoryId": "27"},
+            "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False},
+        }).encode()
+        req = urllib.request.Request(
+            "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
+            data=meta, method="POST", headers={
+                "Authorization": "Bearer " + self.token(),
+                "Content-Type": "application/json; charset=UTF-8",
+                "X-Upload-Content-Type": "video/mp4",
+                "X-Upload-Content-Length": str(len(video)),
+            })
+        with self._request(req) as r:
+            location = r.headers["Location"]
+        put = urllib.request.Request(location, data=video, method="PUT", headers={
+            "Authorization": "Bearer " + self.token(), "Content-Type": "video/mp4"})
+        with self._request(put) as r:
+            vid = json.load(r)["id"]
+        return "https://youtube.com/shorts/" + vid
+
+
+def video_bytes(cfg, media):
+    """Read the mp4 from the checkout when it is a repo path, otherwise download it."""
+    if not media.startswith(("http://", "https://")):
+        path = os.path.join(os.path.dirname(HERE), media.lstrip("/"))
+        if os.path.exists(path):
+            with open(path, "rb") as f:
+                return f.read()
+    with urllib.request.urlopen(media_url(cfg, media), timeout=300) as r:
+        return r.read()
+
+
+def shorts_text(post):
+    """Title: the caption's first line plus #Shorts (max 100 chars). Description: the caption."""
+    caption = post.get("caption", "")
+    clean = caption.replace("<", "").replace(">", "")
+    hook = post.get("yt_title") or next((l.strip() for l in clean.splitlines() if l.strip()), "Medalwise")
+    tag = " #Shorts"
+    if len(hook) + len(tag) > 100:
+        hook = hook[:100 - len(tag) - 1].rstrip() + "…"
+    return hook + tag, clean[:4900]
+
+
+def publish_youtube(yt, cfg, post):
+    if not post.get("media", "").lower().endswith(".mp4"):
+        raise GraphError("YouTube needs an mp4 video.")
+    title, desc = shorts_text(post)
+    return yt.upload(video_bytes(cfg, post["media"]), title, desc)
+
+
 def parse_time(s):
     t = datetime.fromisoformat(s)
     if t.tzinfo is None:
@@ -150,6 +247,12 @@ def check(g, cfg):
         print("Instagram posts used in the last 24 h:", json.dumps(lim.get("data", lim)))
     except GraphError as e:
         print("Could not read the publishing limit:", e)
+    yt = YouTube()
+    if yt.ready():
+        title, cid = yt.channel()
+        print("YouTube channel:", title, cid)
+    else:
+        print("YouTube: not set up (add YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN secrets).")
 
 
 def run(g, cfg, dry):
@@ -158,6 +261,7 @@ def run(g, cfg, dry):
     now = datetime.now(timezone.utc)
     late = timedelta(hours=cfg.get("skip_if_late_hours", 6))
     ig = None
+    yt = YouTube()
     changed = False
     for post in schedule:
         pid = post["id"]
@@ -173,6 +277,9 @@ def run(g, cfg, dry):
                 print("SKIP", pid, net, "(too late)")
                 changed = True
                 continue
+            if net == "youtube" and not yt.ready():
+                print("WAIT", pid, net, "(YouTube secrets not added yet)")
+                continue
             url = media_url(cfg, post["media"])
             if dry:
                 print("WOULD POST", pid, net, url)
@@ -184,6 +291,8 @@ def run(g, cfg, dry):
                     link = publish_instagram(g, ig, post, url)
                 elif net == "facebook":
                     link = publish_facebook(g, cfg["facebook_page_id"], post, url)
+                elif net == "youtube":
+                    link = publish_youtube(yt, cfg, post)
                 else:
                     raise GraphError("unknown network " + net)
                 done[net] = {"status": "published", "link": link, "at": now.isoformat()}
