@@ -2,7 +2,13 @@ name: Social autopost
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    # GitHub delays or drops frequent schedules, so run a few minutes after each
+    # posting slot (IST 06:30, 09:30, 14:30, 20:00 = UTC 01:00, 04:00, 09:00, 14:30),
+    # with backups later in the hour, plus a slow sweep in between.
+    - cron: "7,37 1,4,9 * * *"
+    - cron: "37 14 * * *"
+    - cron: "7 15 * * *"
+    - cron: "17 */2 * * *"
   workflow_dispatch:
     inputs:
       mode:
