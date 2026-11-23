@@ -1,0 +1,57 @@
+{
+ "note": "Post after the 2026-11-23 batch (i.e. after 2026-11-30 06:30 IST: Nov 30 09:30 chemistry, 14:30 biology, 20:00 maths, Dec 1 06:30 physics) (captions carry its answers). Fill time with the next free slots in this order; slot_ist/region are the intended rotation.",
+ "posts": [
+  {
+   "id": "2026-11-24-chemistry",
+   "time": null,
+   "slot_ist": "09:30",
+   "region": "US West",
+   "type": "reel",
+   "media": "autopost/media/2026-11-24/reel-chemistry.mp4",
+   "caption": "One alkane, one Cl₂ lamp, a flask full of products. How many, and how many fractions after distillation? ⚗️\n\n2-Methylbutane + Cl₂ in sunlight, monochloro products only. x = products (stereoisomers counted), y = fractions on fractional distillation. NSEC-level organic.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: B, pH 4.65.\nAcid 10 mmol + NaOH 5 mmol leaves a buffer of 5 mmol CH₃COOH and 5 mmol CH₃COO⁻. HCl (0.5 mmol) turns acetate into acid: 4.5 and 5.5 mmol. pH = 4.74 + log(4.5/5.5) = 4.74 − 0.087 ≈ 4.65.\n\n🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#ChemistryOlympiad #NSEC #USNCO #OrganicChemistry #Isomerism #Stereochemistry #FreeRadical #ChemistryPuzzle #JEEChemistry #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-24-biology",
+   "time": null,
+   "slot_ist": "14:30",
+   "region": "Australia",
+   "type": "reel",
+   "media": "autopost/media/2026-11-24/reel-biology.mp4",
+   "caption": "Most students call AB and ab the parental types. Here that mistake costs the whole answer. 🧬\n\nAAbb × aaBB, then a test cross: AB 45, Ab 455, aB 450, ab 50. How far apart are genes A and B? NSEB-level genetics.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: C, 62.5 mL.\nEach litre of blood gives up 200 − 150 = 50 mL O₂. The body uses 250 mL/min, so 250/50 = 5 L/min must flow (cardiac output). Stroke volume = 5000/80 = 62.5 mL per beat. That's the Fick principle.\n\n🏅 Medalwise: 1-on-1 Biology Olympiad and NEET mentoring (NSEB, USABO, INBO). Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#BiologyOlympiad #NSEB #USABO #Genetics #Linkage #CrossingOver #GeneMapping #NEET #BiologyPuzzle #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-24-maths",
+   "time": null,
+   "slot_ist": "20:00",
+   "region": "India",
+   "type": "reel",
+   "media": "autopost/media/2026-11-24/reel-maths.mp4",
+   "caption": "Every topper writes 4 here. And every topper loses marks. 😬\n\nx, y > 0 and x + y = 1. Find the minimum of (x + 1/x)(y + 1/y). Spot the flaw in AM-GM. IOQM / RMO-level inequalities.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: C, 6 tosses.\nLet E = expected tosses from the start, F = after one H. E = 1 + ½F + ½E and F = 1 + ½E, so E = 6. For HT the wait is only 4: a wrong toss never sends you back to the start.\n\n🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#MathOlympiad #IOQM #RMO #AMC12 #Inequalities #AMGM #Algebra #MathPuzzle #GiftedKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-24-physics",
+   "time": null,
+   "slot_ist": "06:30",
+   "region": "US East",
+   "type": "reel",
+   "media": "autopost/media/2026-11-24/reel-physics.mp4",
+   "caption": "Throw a ball up a hill. Where does it land on the slope? ⛰️⚾\n\nSlope 30°, ball thrown from its foot at 20 m/s, 60° above the horizontal. Distance along the slope? The flat-ground formula won't save you. NSEP-level kinematics.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: B, 9 N.\nOnly friction drives the 4 kg block, at most 0.3 × 2 × 10 = 6 N, so its max acceleration is 6/4 = 1.5 m/s². Together: F = 6 × 1.5 = 9 N. Check the top block: 9 − 6 = 2 × 1.5 ✔.\n\n🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#PhysicsOlympiad #NSEP #USAPhO #FmaExam #Projectile #InclinedPlane #Kinematics #PhysicsPuzzle #JEEAdvanced #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  }
+ ]
+}
