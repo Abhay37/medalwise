@@ -1,0 +1,12 @@
+Draw it and you'll find one circle. Do the algebra and... surprise! ⭕⭕
+
+Find the sum of the radii of ALL circles that touch both axes and pass through (2, 1). AMC 12 / IOQM-level coordinate geometry.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: C, 25/4.
+Let t = xy. The expression becomes t + 2/t − 2, and x + y = 1 forces t ≤ 1/4, where t + 2/t is still decreasing. So the minimum is at t = 1/4: 1/4 + 8 − 2 = 25/4. AM-GM's 4 needs x = y = 1, which is impossible here.
+
+🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#MathOlympiad #AMC12 #IOQM #CoordinateGeometry #Circles #Quadratics #VietaFormulas #MathPuzzle #GiftedKids #Medalwise
