@@ -1,0 +1,12 @@
+A car honks while driving towards a wall. The driver hears the horn AND its echo: how many beats per second? 🚗🔊🧱
+
+20 m/s, 500 Hz horn, sound at 340 m/s. NSEP-level Doppler with a twist.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: B, 26.7 m.
+Tilt the axes along the slope. Perpendicular: u = 10 m/s, g = 5√3, so T = 4/√3 s. Along the slope: u = 10√3, g = −5, so d = 40 − 40/3 = 80/3 ≈ 26.7 m. The flat-ground formula gives 34.6 m, which is wrong here.
+
+🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#PhysicsOlympiad #NSEP #USAPhO #FmaExam #DopplerEffect #Beats #SoundWaves #PhysicsPuzzle #JEEAdvanced #Medalwise
