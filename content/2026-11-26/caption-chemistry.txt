@@ -1,0 +1,12 @@
+One density, one edge length, one hidden lattice. Can you find the atom's radius? 💎
+
+M = 93 g/mol, cubic cell with a = 330 pm, density 8.55 g/cm³. Atomic radius? NSEC-level solid state.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: B, 6.
+[Fe(CN)₆]⁴⁻: low-spin d⁶, 0 unpaired. [Fe(H₂O)₆]²⁺: high-spin d⁶, 4. [Ni(CN)₄]²⁻: square planar d⁸, 0. [NiCl₄]²⁻: tetrahedral d⁸, 2. Total = 6. Ligand strength AND geometry both matter.
+
+🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#ChemistryOlympiad #NSEC #USNCO #SolidState #UnitCell #CrystalLattice #BCC #ChemistryPuzzle #JEEChemistry #Medalwise
