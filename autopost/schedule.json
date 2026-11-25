@@ -439,6 +439,50 @@
         "instagram",
         "facebook"
       ]
+    },
+    {
+      "id": "2026-11-26-maths",
+      "time": "2026-12-02T09:30:00+05:30",
+      "type": "reel",
+      "media": "autopost/media/2026-11-26/reel-maths.mp4",
+      "caption": "Looks like derangements. It's NOT derangements. 🔀\n\nArrange 1, 2, 3, 4, 5, 6 in a row so that no number is immediately followed by the next one (no 12, 23, 34, 45, 56). How many ways? Integer answer. AIME / IOQM-level combinatorics.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: C, 6.\nA circle touching both axes in the first quadrant has centre (r, r). Through (2, 1): (2 − r)² + (1 − r)² = r², so r² − 6r + 5 = 0, giving r = 1 or r = 5. Both circles work: 1 + 5 = 6. The big one is easy to miss!\n\n🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#MathOlympiad #AIME #IOQM #AMC12 #Combinatorics #InclusionExclusion #Permutations #MathPuzzle #GiftedKids #Medalwise",
+      "networks": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-11-26-physics",
+      "time": "2026-12-02T14:30:00+05:30",
+      "type": "reel",
+      "media": "autopost/media/2026-11-26/reel-physics.mp4",
+      "caption": "Drop a metal rod through a magnetic field and it stops speeding up. How fast does it end up? 🧲⬇️\n\nRails 0.5 m apart, 0.2 Ω at the top, B = 0.4 T, a 20 g rod sliding down. Terminal speed? NSEP-level EMI.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: D, 62.5 Hz.\nThe wall hears 500 × 340/320 = 531.25 Hz and reflects it. The driver, moving towards the wall, hears 531.25 × 360/340 = 562.5 Hz. Beats = 562.5 − 500 = 62.5 Hz. The 2uf/v shortcut (58.8 Hz) is only approximate.\n\n🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#PhysicsOlympiad #NSEP #USAPhO #FmaExam #Electromagnetism #FaradaysLaw #LenzsLaw #PhysicsPuzzle #JEEAdvanced #Medalwise",
+      "networks": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-11-26-chemistry",
+      "time": "2026-12-02T20:00:00+05:30",
+      "type": "reel",
+      "media": "autopost/media/2026-11-26/reel-chemistry.mp4",
+      "caption": "One density, one edge length, one hidden lattice. Can you find the atom's radius? 💎\n\nM = 93 g/mol, cubic cell with a = 330 pm, density 8.55 g/cm³. Atomic radius? NSEC-level solid state.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: B, 6.\n[Fe(CN)₆]⁴⁻: low-spin d⁶, 0 unpaired. [Fe(H₂O)₆]²⁺: high-spin d⁶, 4. [Ni(CN)₄]²⁻: square planar d⁸, 0. [NiCl₄]²⁻: tetrahedral d⁸, 2. Total = 6. Ligand strength AND geometry both matter.\n\n🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#ChemistryOlympiad #NSEC #USNCO #SolidState #UnitCell #CrystalLattice #BCC #ChemistryPuzzle #JEEChemistry #Medalwise",
+      "networks": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "2026-11-26-biology",
+      "time": "2026-12-03T06:30:00+05:30",
+      "type": "reel",
+      "media": "autopost/media/2026-11-26/reel-biology.mp4",
+      "caption": "10,000 kJ of sunlight is captured by grass. How much ends up as grasshopper? 🦗\n\nPlants respire 40% of GPP. Grasshoppers eat 20% of the NPP, assimilate 50% and respire 60% of that. New grasshopper biomass? The 10% rule will betray you. NSEB-level ecology.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: A, 36 minutes.\nCells divide at random, so the fraction of cells in a phase = the fraction of the cycle it takes. Metaphase: 30/1000 = 3% of 20 h = 0.6 h = 36 min. Divide by ALL cells, not just the 200 dividing ones.\n\n🏅 Medalwise: 1-on-1 Biology Olympiad and NEET mentoring (NSEB, USABO, INBO). Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#BiologyOlympiad #NSEB #USABO #Ecology #EnergyFlow #FoodChain #Productivity #NEET #BiologyPuzzle #Medalwise",
+      "networks": [
+        "instagram",
+        "facebook"
+      ]
     }
   ]
 }
