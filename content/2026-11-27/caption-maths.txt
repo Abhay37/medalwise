@@ -1,0 +1,12 @@
+A number with more digits than atoms in the universe... and you only need its last two. 🗼
+
+Find the last two digits of 7^(7^2026). IOQM / RMO-level number theory.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: 309.
+Inclusion-exclusion over the 5 banned pairs (12, 23, 34, 45, 56). If k pairs are forced, glue them into blocks: (6 − k)! ways. Total = 720 − 5·120 + 10·24 − 10·6 + 5·2 − 1 = 309. Not derangements (265)!
+
+🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#MathOlympiad #IOQM #RMO #AMC12 #NumberTheory #ModularArithmetic #Exponents #MathPuzzle #GiftedKids #Medalwise

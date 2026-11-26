@@ -1,0 +1,12 @@
+Add HBr, then alcoholic KOH. Do you get your alkene back, or something new? 🔄
+
+3,3-Dimethylbut-1-ene + HBr (no peroxide), then the major product is heated with alc. KOH. Major final product? NSEC-level organic mechanism.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: B, 142.9 pm.
+Z = ρa³N_A/M = 8.55 × (3.30 × 10⁻⁸)³ × 6.022 × 10²³ / 93 ≈ 2, so the lattice is bcc. In bcc, atoms touch along the body diagonal: 4r = √3a, so r = 1.732 × 330/4 ≈ 142.9 pm.
+
+🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#ChemistryOlympiad #NSEC #USNCO #OrganicChemistry #Carbocation #Rearrangement #ReactionMechanism #ChemistryPuzzle #JEEChemistry #Medalwise
