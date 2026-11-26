@@ -1,0 +1,12 @@
+A rolling ball hits a perfectly smooth ramp. Does its spin help it climb higher? 🎳⛸️
+
+A solid sphere rolls without slipping at 7 m/s, then goes up a FRICTIONLESS incline. Max height of its centre? NSEP-level rotation, and one word changes everything.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: C, 1 m/s.
+EMF = BLv drives I = BLv/R, and the magnetic force BIL = B²L²v/R pushes up. At terminal speed it equals mg: v = mgR/(B²L²) = (0.02 × 10 × 0.2)/(0.16 × 0.25) = 1 m/s. Check: I²R = 0.2 W = mgv ✔.
+
+🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#PhysicsOlympiad #NSEP #USAPhO #FmaExam #RotationalMotion #RollingMotion #Energy #PhysicsPuzzle #JEEAdvanced #Medalwise
