@@ -1,0 +1,12 @@
+Every topper writes 4 here. And every topper loses marks. 😬
+
+x, y > 0 and x + y = 1. Find the minimum of (x + 1/x)(y + 1/y). Spot the flaw in AM-GM. IOQM / RMO-level inequalities.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: C, 6 tosses.
+Let E = expected tosses from the start, F = after one H. E = 1 + ½F + ½E and F = 1 + ½E, so E = 6. For HT the wait is only 4: a wrong toss never sends you back to the start.
+
+🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#MathOlympiad #IOQM #RMO #AMC12 #Inequalities #AMGM #Algebra #MathPuzzle #GiftedKids #Medalwise

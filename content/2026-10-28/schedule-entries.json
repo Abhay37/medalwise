@@ -1,0 +1,57 @@
+{
+ "note": "Post after the 2026-10-27 batch (captions carry its answers). Fill time with the next free slots in this order; slot_ist/region are the intended rotation.",
+ "posts": [
+  {
+   "id": "2026-10-28-physics",
+   "time": null,
+   "slot_ist": "08:30",
+   "region": "US West",
+   "type": "reel",
+   "media": "autopost/media/2026-10-28/reel-physics.mp4",
+   "caption": "100 g of ice meets 100 g of warm water. Who wins? 🧊🔥\n\nIce at −20 °C into water at 40 °C, insulated. How much ice is left at equilibrium? Check the heat budget before you trust the formula. NSEP-level calorimetry.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: B, 100 cm.\nSeen from air, the mirror looks raised: 40 ÷ (4/3) = 30 cm below the surface. So the eye is 20 + 30 = 50 cm in front of the mirror, and its image is 50 cm behind it: 100 cm from the eye.\n\n🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#PhysicsOlympiad #NSEP #USAPhO #FmaExam #Calorimetry #ThermalPhysics #LatentHeat #PhysicsPuzzle #JEEAdvanced #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-10-28-chemistry",
+   "time": null,
+   "slot_ist": "14:30",
+   "region": "Australia",
+   "type": "reel",
+   "media": "autopost/media/2026-10-28/reel-chemistry.mp4",
+   "caption": "Two iron half-cells, one simple question… and most students just add the voltages. ⚡\n\nE°(Fe³⁺/Fe²⁺) = +0.77 V, E°(Fe²⁺/Fe) = −0.44 V. What is E°(Fe³⁺/Fe)? NSEC-level electrochemistry.\n\nComment your answer 👇 Full solution tomorrow.\n\n✅ Last answer: A, 550 mmHg.\nTotal = 200 + 2x. At 30 min, 500 → x = 150, so A fell to 50 = 200/4: two half-lives, t½ = 15 min. 45 min = 3 half-lives → A = 25, x = 175 → total = 550 mmHg.\n\n🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#ChemistryOlympiad #NSEC #USNCO #Electrochemistry #ElectrodePotential #GibbsEnergy #ChemistryPuzzle #JEEChemistry #STEMKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-10-28-biology",
+   "time": null,
+   "slot_ist": "20:00",
+   "region": "India",
+   "type": "reel",
+   "media": "autopost/media/2026-10-28/reel-biology.mp4",
+   "caption": "Both breathe 7.5 litres a minute. Do both lungs get the same fresh air? 🫁\n\nX: 15 breaths × 500 mL. Y: 30 breaths × 250 mL. Dead space 150 mL each. The answer explains why panting doesn't help. NSEB-level physiology.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: C, 12 chromosomes, 6 pg.\nAfter meiosis I each cell has 6 chromosomes (2 chromatids each), 6 pg. In anaphase II the sister chromatids split, so 12 chromosomes are counted (by centromeres), but DNA stays 6 pg until cytokinesis.\n\n🏅 Medalwise: 1-on-1 Biology Olympiad and NEET mentoring (NSEB, USABO, INBO). Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#BiologyOlympiad #NSEB #USABO #HumanPhysiology #Respiration #DeadSpace #NEET #BiologyPuzzle #STEMKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-10-28-maths",
+   "time": null,
+   "slot_ist": "05:30",
+   "region": "US East",
+   "type": "reel",
+   "media": "autopost/media/2026-10-28/reel-maths.mp4",
+   "caption": "450+ digit numbers, and the answer fits on your fingers. ✋\n\nFind gcd(2²⁰²⁶ − 1, 2¹⁵¹⁸ − 1). No calculator. One beautiful identity does all the work. IOQM / RMO-level number theory.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: 34.\nLet n = ⌊x⌋, so x = √(5n − 4) with n ≤ x < n + 1 → 1 ≤ n ≤ 4. Roots: 1, √6, √11, 4. Sum of squares = 1 + 6 + 11 + 16 = 34. (Treating ⌊x⌋ as x misses √6 and √11!)\n\n🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#MathOlympiad #IOQM #RMO #AMC12 #AIME #NumberTheory #GCD #MathPuzzle #GiftedKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  }
+ ]
+}

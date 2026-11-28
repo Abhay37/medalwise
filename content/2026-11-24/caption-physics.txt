@@ -1,0 +1,12 @@
+Throw a ball up a hill. Where does it land on the slope? ⛰️⚾
+
+Slope 30°, ball thrown from its foot at 20 m/s, 60° above the horizontal. Distance along the slope? The flat-ground formula won't save you. NSEP-level kinematics.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: B, 9 N.
+Only friction drives the 4 kg block, at most 0.3 × 2 × 10 = 6 N, so its max acceleration is 6/4 = 1.5 m/s². Together: F = 6 × 1.5 = 9 N. Check the top block: 9 − 6 = 2 × 1.5 ✔.
+
+🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#PhysicsOlympiad #NSEP #USAPhO #FmaExam #Projectile #InclinedPlane #Kinematics #PhysicsPuzzle #JEEAdvanced #Medalwise

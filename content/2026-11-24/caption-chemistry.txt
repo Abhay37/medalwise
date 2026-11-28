@@ -1,0 +1,12 @@
+One alkane, one Cl₂ lamp, a flask full of products. How many, and how many fractions after distillation? ⚗️
+
+2-Methylbutane + Cl₂ in sunlight, monochloro products only. x = products (stereoisomers counted), y = fractions on fractional distillation. NSEC-level organic.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: B, pH 4.65.
+Acid 10 mmol + NaOH 5 mmol leaves a buffer of 5 mmol CH₃COOH and 5 mmol CH₃COO⁻. HCl (0.5 mmol) turns acetate into acid: 4.5 and 5.5 mmol. pH = 4.74 + log(4.5/5.5) = 4.74 − 0.087 ≈ 4.65.
+
+🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#ChemistryOlympiad #NSEC #USNCO #OrganicChemistry #Isomerism #Stereochemistry #FreeRadical #ChemistryPuzzle #JEEChemistry #Medalwise

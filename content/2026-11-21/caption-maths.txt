@@ -1,0 +1,12 @@
+You know trailing zeros in base 10. Base 12 has a twist. 🔄
+
+When 2026! is written in base 12, how many zeros does it end with? Which prime runs out first, 2 or 3? IOQM / RMO-level number theory.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: B, −x − 1.
+Put x = ω (ω² + ω + 1 = 0, ω³ = 1). ω + 1 = −ω², so (ω + 1)²⁰²⁶ = ω⁴⁰⁵² = ω² = −ω − 1. The remainder ax + b must match: a = −1, b = −1.
+
+🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#MathOlympiad #IOQM #RMO #AMC12 #AIME #NumberTheory #Factorials #MathPuzzle #GiftedKids #Medalwise

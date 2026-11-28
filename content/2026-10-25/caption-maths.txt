@@ -1,0 +1,12 @@
+Real IOQM-level: one equation, three traps. 🪤
+
+How many ordered pairs of integers (x, y) satisfy 1/x + 1/y = 1/2026? Negatives allowed, zero not. 9? 18? Think again before you answer!
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: N = 59.
+Each remainder is 1 less than the divisor, so N + 1 is divisible by 2, 3, 4, 5 and 6. LCM = 60, so N = 59. (Not 719: the LCM is only 60!)
+
+🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#IOQM #RMO #MathOlympiad #AMC12 #AIME #NumberTheory #Diophantine #MathPuzzle #GiftedKids #Medalwise

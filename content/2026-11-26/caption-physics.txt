@@ -1,0 +1,12 @@
+Drop a metal rod through a magnetic field and it stops speeding up. How fast does it end up? 🧲⬇️
+
+Rails 0.5 m apart, 0.2 Ω at the top, B = 0.4 T, a 20 g rod sliding down. Terminal speed? NSEP-level EMI.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: D, 62.5 Hz.
+The wall hears 500 × 340/320 = 531.25 Hz and reflects it. The driver, moving towards the wall, hears 531.25 × 360/340 = 562.5 Hz. Beats = 562.5 − 500 = 62.5 Hz. The 2uf/v shortcut (58.8 Hz) is only approximate.
+
+🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#PhysicsOlympiad #NSEP #USAPhO #FmaExam #Electromagnetism #FaradaysLaw #LenzsLaw #PhysicsPuzzle #JEEAdvanced #Medalwise

@@ -1,0 +1,12 @@
+The vapour got lighter, so PCl₅ split up. But by how much? 🧪
+
+PCl₅ ⇌ PCl₃ + Cl₂, pure PCl₅ (M = 208.5) heated, equilibrium vapour density 62.55. Fraction dissociated? One formula slip changes the answer. NSEC-level equilibrium.
+
+Comment your answer 👇 Full solution tomorrow.
+
+✅ Last answer: C, −0.037 V.
+E° values can't be added, but ΔG° = −nFE° can: ΔG° = −1F(0.77) − 2F(−0.44) = +0.11F. For 3 electrons, E° = −0.11/3 ≈ −0.037 V.
+
+🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#ChemistryOlympiad #NSEC #USNCO #ChemicalEquilibrium #VapourDensity #DegreeOfDissociation #ChemistryPuzzle #JEEChemistry #STEMKids #Medalwise

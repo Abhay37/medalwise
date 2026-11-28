@@ -1,0 +1,12 @@
+His sister has a rare genetic disease. He is healthy, and so is his wife. 🧬
+
+The disease affects 1 in 400 people. What are the odds their first baby has it? Three traps hide in this one.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: D, A, B, AB or O are all possible!
+Group A can be IᴬIᴬ or Iᴬi, group B can be IᴮIᴮ or Iᴮi. If both parents carry the hidden i: Iᴬi × Iᴮi gives AB, A, B and O, each with 1/4 chance.
+
+🏅 Medalwise: 1-on-1 Biology Olympiad and NEET mentoring (NSEB, USABO, INBO). Free trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#BiologyOlympiad #NSEB #USABO #INBO #Genetics #HardyWeinberg #Pedigree #BiologyPuzzle #NEETPrep #Medalwise

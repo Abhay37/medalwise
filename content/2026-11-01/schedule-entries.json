@@ -1,0 +1,57 @@
+{
+ "note": "Post after the 2026-10-28 batch (captions carry its answers). Fill time with the next free slots in this order; slot_ist/region are the intended rotation.",
+ "posts": [
+  {
+   "id": "2026-11-01-maths",
+   "time": null,
+   "slot_ist": "09:30",
+   "region": "US West",
+   "type": "reel",
+   "media": "autopost/media/2026-11-01/reel-maths.mp4",
+   "caption": "A degree-2026 polynomial shrinks to just two terms. 🤯\n\nWhat is the remainder when (x + 1)²⁰²⁶ is divided by x² + x + 1? Roots of unity do the magic. A, B, C or D? IOQM / RMO-level algebra.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: 3.\ngcd(2ᵃ − 1, 2ᵇ − 1) = 2^gcd(a, b) − 1, because Euclid's algorithm works on the exponents. gcd(2026, 1518) = 2, so the answer is 2² − 1 = 3.\n\n🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#MathOlympiad #IOQM #RMO #AMC12 #AIME #Polynomials #RootsOfUnity #MathPuzzle #GiftedKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-01-physics",
+   "time": null,
+   "slot_ist": "14:30",
+   "region": "Australia",
+   "type": "reel",
+   "media": "autopost/media/2026-11-01/reel-physics.mp4",
+   "caption": "Two blocks, one spring, one push. How much does the spring squeeze? 🧱〰️🧱\n\nTwo 2 kg blocks, k = 400 N/m, left block given 6 m/s. Maximum compression? The spring doesn't get all the energy! NSEP-level momentum + energy.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: D, 62.5 g of ice left.\nWater cooling to 0 °C gives 4000 cal. Warming the ice to 0 °C takes 1000 cal, leaving 3000 cal: 3000 ÷ 80 = 37.5 g melts. Not enough to melt it all, so it ends at 0 °C with 100 − 37.5 = 62.5 g of ice.\n\n🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#PhysicsOlympiad #NSEP #USAPhO #FmaExam #Momentum #SpringMass #ReducedMass #PhysicsPuzzle #JEEAdvanced #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-01-chemistry",
+   "time": null,
+   "slot_ist": "20:00",
+   "region": "India",
+   "type": "reel",
+   "media": "autopost/media/2026-11-01/reel-chemistry.mp4",
+   "caption": "The vapour got lighter, so PCl₅ split up. But by how much? 🧪\n\nPCl₅ ⇌ PCl₃ + Cl₂, pure PCl₅ (M = 208.5) heated, equilibrium vapour density 62.55. Fraction dissociated? One formula slip changes the answer. NSEC-level equilibrium.\n\nComment your answer 👇 Full solution tomorrow.\n\n✅ Last answer: C, −0.037 V.\nE° values can't be added, but ΔG° = −nFE° can: ΔG° = −1F(0.77) − 2F(−0.44) = +0.11F. For 3 electrons, E° = −0.11/3 ≈ −0.037 V.\n\n🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#ChemistryOlympiad #NSEC #USNCO #ChemicalEquilibrium #VapourDensity #DegreeOfDissociation #ChemistryPuzzle #JEEChemistry #STEMKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-01-biology",
+   "time": null,
+   "slot_ist": "06:30",
+   "region": "US East",
+   "type": "reel",
+   "media": "autopost/media/2026-11-01/reel-biology.mp4",
+   "caption": "60 frogs tagged, 1 in 4 tags fell off, 10 tagged frogs found in a catch of 50. 🐸\n\nHow many frogs live in the pond? Correct for the lost tags in the RIGHT direction. NSEB-level ecology.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: B, X gets 1.75× as much.\nThe first 150 mL of each breath stays in the airways. X: 15 × (500 − 150) = 5250 mL/min. Y: 30 × (250 − 150) = 3000 mL/min. 5250 ÷ 3000 = 1.75, which is why panting is inefficient.\n\n🏅 Medalwise: 1-on-1 Biology Olympiad and NEET mentoring (NSEB, USABO, INBO). Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#BiologyOlympiad #NSEB #USABO #Ecology #MarkRecapture #PopulationEcology #NEET #BiologyPuzzle #STEMKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "note": "Post after the 2026-11-21 batch (captions carry its answers). Fill time with the next free slots in this order; slot_ist/region are the intended rotation.",
+ "posts": [
+  {
+   "id": "2026-11-22-chemistry",
+   "time": null,
+   "slot_ist": "09:30",
+   "region": "US West",
+   "type": "reel",
+   "media": "autopost/media/2026-11-22/reel-chemistry.mp4",
+   "caption": "Mix the acid and the base, feel the beaker warm up. 🔥\n\n100 mL of 0.5 M H₂SO₄ + 200 mL of 0.4 M NaOH. ΔH(neutralisation) = −57.1 kJ per mole of water. How many kJ are released? NSEC-level thermochemistry.\n\nComment your answer 👇 Full solution tomorrow.\n\n✅ Last answer: C, Ag₂CrO₄ in water, AgCl in 0.01 M AgNO₃.\nWater: AgCl s ≈ 1.3 × 10⁻⁵ M, Ag₂CrO₄ s ≈ 6.5 × 10⁻⁵ M. With 0.01 M Ag⁺: AgCl s = 1.8 × 10⁻⁸ M, Ag₂CrO₄ s = Ksp/[Ag⁺]² = 1.1 × 10⁻⁸ M. The squared [Ag⁺] flips the order.\n\n🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#ChemistryOlympiad #NSEC #USNCO #Thermochemistry #Neutralisation #LimitingReagent #ChemistryPuzzle #JEEChemistry #STEMKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-22-biology",
+   "time": null,
+   "slot_ist": "14:30",
+   "region": "Australia",
+   "type": "reel",
+   "media": "autopost/media/2026-11-22/reel-biology.mp4",
+   "caption": "Same seeds, two flasks: one falls by 10 mL, the other by 3 mL. 🌱\n\nFlask 1 has KOH (absorbs CO₂), flask 2 has water. Find the RQ and guess what the seeds are burning. NSEB-level respiration.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: C, 3 amino acids.\nmRNA = 5′-GCAUGAAACCCUGAUGGUAA-3′. The ribosome starts at the first AUG: AUG (Met) – AAA (Lys) – CCC (Pro) – UGA (stop). A stop codon adds no amino acid, so the chain is 3 long.\n\n🏅 Medalwise: 1-on-1 Biology Olympiad and NEET mentoring (NSEB, USABO, INBO). Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#BiologyOlympiad #NSEB #USABO #Respiration #RespiratoryQuotient #PlantPhysiology #NEET #BiologyPuzzle #STEMKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-22-maths",
+   "time": null,
+   "slot_ist": "20:00",
+   "region": "India",
+   "type": "reel",
+   "media": "autopost/media/2026-11-22/reel-maths.mp4",
+   "caption": "Three ugly roots, one clean answer. ✨\n\na, b, c are the roots of x³ − 3x + 1 = 0. Find a⁵ + b⁵ + c⁵ without solving the cubic. AMC 12 / IOQM-level algebra.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: 1009 zeros.\nEach base-12 zero needs 12 = 2²·3. 2026! has 1010 threes and 2018 twos, and the twos give only 2018 ÷ 2 = 1009 twelves. So the 2s run out first: 1009.\n\n🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#MathOlympiad #AMC12 #IOQM #RMO #AIME #NewtonsSums #Polynomials #MathPuzzle #GiftedKids #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  },
+  {
+   "id": "2026-11-22-physics",
+   "time": null,
+   "slot_ist": "06:30",
+   "region": "US East",
+   "type": "reel",
+   "media": "autopost/media/2026-11-22/reel-physics.mp4",
+   "caption": "A block tied under water, inside a lift that's speeding up. Does the string feel it? 🛗💧\n\nBlock: 600 kg/m³, 1000 cm³, held under water by a string. The lift accelerates UP at 5 m/s². Tension? NSEP-level fluids.\n\nComment your answer 👇 Solution tomorrow.\n\n✅ Last answer: A, mgR/12.\nIn a circular orbit E = −GMm/2r = −mgR²/2r. E(2R) = −mgR/4, E(3R) = −mgR/6. Energy needed = mgR/4 − mgR/6 = mgR/12. The PE rises by mgR/6, but the satellite gives back mgR/12 of KE.\n\n🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/\n\n#PhysicsOlympiad #NSEP #USAPhO #FmaExam #FluidMechanics #Buoyancy #PseudoForce #PhysicsPuzzle #JEEAdvanced #Medalwise",
+   "networks": [
+    "instagram",
+    "facebook"
+   ]
+  }
+ ]
+}

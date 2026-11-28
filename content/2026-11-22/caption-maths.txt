@@ -1,0 +1,12 @@
+Three ugly roots, one clean answer. ✨
+
+a, b, c are the roots of x³ − 3x + 1 = 0. Find a⁵ + b⁵ + c⁵ without solving the cubic. AMC 12 / IOQM-level algebra.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: 1009 zeros.
+Each base-12 zero needs 12 = 2²·3. 2026! has 1010 threes and 2018 twos, and the twos give only 2018 ÷ 2 = 1009 twelves. So the 2s run out first: 1009.
+
+🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#MathOlympiad #AMC12 #IOQM #RMO #AIME #NewtonsSums #Polynomials #MathPuzzle #GiftedKids #Medalwise

@@ -1,0 +1,12 @@
+Push only the top block. How hard before the two stop moving together? 🧱➡️
+
+2 kg on top of 4 kg, smooth floor, μ = 0.3 between the blocks, F on the TOP block. Largest F with no slipping? NSEP-level friction.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: C, 6 N.
+In the lift's frame g_eff = 10 + 5 = 15 m/s². Buoyancy = 1000 × 10⁻³ × 15 = 15 N, weight = 600 × 10⁻³ × 15 = 9 N, so T = 15 − 9 = 6 N. The upward acceleration makes buoyancy AND weight grow together.
+
+🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#PhysicsOlympiad #NSEP #USAPhO #FmaExam #Friction #LawsOfMotion #NewtonsLaws #PhysicsPuzzle #JEEAdvanced #Medalwise

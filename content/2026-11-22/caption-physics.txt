@@ -1,0 +1,12 @@
+A block tied under water, inside a lift that's speeding up. Does the string feel it? 🛗💧
+
+Block: 600 kg/m³, 1000 cm³, held under water by a string. The lift accelerates UP at 5 m/s². Tension? NSEP-level fluids.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: A, mgR/12.
+In a circular orbit E = −GMm/2r = −mgR²/2r. E(2R) = −mgR/4, E(3R) = −mgR/6. Energy needed = mgR/4 − mgR/6 = mgR/12. The PE rises by mgR/6, but the satellite gives back mgR/12 of KE.
+
+🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#PhysicsOlympiad #NSEP #USAPhO #FmaExam #FluidMechanics #Buoyancy #PseudoForce #PhysicsPuzzle #JEEAdvanced #Medalwise

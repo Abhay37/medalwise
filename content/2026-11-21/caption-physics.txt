@@ -1,0 +1,12 @@
+Push a satellite from 2R to 3R. How much energy does it really take? 🛰️🌍
+
+Mass m, circular orbits, R = Earth's radius, g at the surface. Minimum energy to shift orbits? Cheaper than you think! NSEP-level gravitation.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: B, 0.30 m.
+At maximum compression both blocks move together: 2 × 6 = 4v → v = 3 m/s. KE falls from 36 J to 18 J, so the spring stores 18 J = ½ × 400 × x² → x = 0.30 m.
+
+🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#PhysicsOlympiad #NSEP #USAPhO #FmaExam #Gravitation #SatelliteMotion #OrbitalEnergy #PhysicsPuzzle #JEEAdvanced #Medalwise

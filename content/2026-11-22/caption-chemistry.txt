@@ -1,0 +1,12 @@
+Mix the acid and the base, feel the beaker warm up. 🔥
+
+100 mL of 0.5 M H₂SO₄ + 200 mL of 0.4 M NaOH. ΔH(neutralisation) = −57.1 kJ per mole of water. How many kJ are released? NSEC-level thermochemistry.
+
+Comment your answer 👇 Full solution tomorrow.
+
+✅ Last answer: C, Ag₂CrO₄ in water, AgCl in 0.01 M AgNO₃.
+Water: AgCl s ≈ 1.3 × 10⁻⁵ M, Ag₂CrO₄ s ≈ 6.5 × 10⁻⁵ M. With 0.01 M Ag⁺: AgCl s = 1.8 × 10⁻⁸ M, Ag₂CrO₄ s = Ksp/[Ag⁺]² = 1.1 × 10⁻⁸ M. The squared [Ag⁺] flips the order.
+
+🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#ChemistryOlympiad #NSEC #USNCO #Thermochemistry #Neutralisation #LimitingReagent #ChemistryPuzzle #JEEChemistry #STEMKids #Medalwise

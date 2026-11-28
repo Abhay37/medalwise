@@ -1,0 +1,12 @@
+Two charged capacitors, connected the "wrong way" round. Where does the energy go? ⚡
+
+2 μF at 30 V and 1 μF at 15 V, + plate joined to − plate. Ideal wires, zero resistance... so how much heat? Real NSEP-level electrostatics.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: D, 10.
+Just after release ω = 0 and the centre of mass accelerates down at 3g/4, so the hinge gives only mg/4. At the vertical, ω² = 3g/L and the centre of mass needs 3g/2 upward, so the hinge gives 5mg/2. Ratio = 10.
+
+🏅 Medalwise: 1-on-1 Physics Olympiad coaching (NSEP, INPhO, USAPhO, F=ma) with Olympiad and JEE mentors. Free trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#PhysicsOlympiad #NSEP #INPhO #USAPhO #Capacitors #Electrostatics #PhysicsPuzzle #JEEAdvanced #STEMKids #Medalwise

@@ -1,0 +1,12 @@
+A degree-2026 polynomial shrinks to just two terms. 🤯
+
+What is the remainder when (x + 1)²⁰²⁶ is divided by x² + x + 1? Roots of unity do the magic. A, B, C or D? IOQM / RMO-level algebra.
+
+Comment your answer 👇 Solution tomorrow.
+
+✅ Last answer: 3.
+gcd(2ᵃ − 1, 2ᵇ − 1) = 2^gcd(a, b) − 1, because Euclid's algorithm works on the exponents. gcd(2026, 1518) = 2, so the answer is 2² − 1 = 3.
+
+🏅 Medalwise: live 1-on-1 coaching for IOQM, RMO, AMC & AIME with Olympiad mentors. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#MathOlympiad #IOQM #RMO #AMC12 #AIME #Polynomials #RootsOfUnity #MathPuzzle #GiftedKids #Medalwise

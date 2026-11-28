@@ -1,0 +1,12 @@
+Two silver salts, one beaker of water and one of AgNO₃, and the winner flips. 🔄
+
+Ksp(AgCl) = 1.8 × 10⁻¹⁰, Ksp(Ag₂CrO₄) = 1.1 × 10⁻¹². Which is more soluble in pure water, and in 0.01 M AgNO₃? NSEC-level ionic equilibrium.
+
+Comment your answer 👇 Full solution tomorrow.
+
+✅ Last answer: D, 0.67.
+Vapour density of PCl₅ = 208.5/2 = 104.25. Moles become 1 + α, so D/d = 1 + α → α = (104.25 − 62.55)/62.55 = 2/3 ≈ 0.67.
+
+🏅 Medalwise: personal 1-on-1 coaching for NSEC, USNCO and JEE chemistry. Free diagnostic + trial class, link in bio / https://abhay37.github.io/medalwise/
+
+#ChemistryOlympiad #NSEC #USNCO #IonicEquilibrium #SolubilityProduct #CommonIonEffect #ChemistryPuzzle #JEEChemistry #STEMKids #Medalwise
